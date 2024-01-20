@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;doGET&apos; to &apos;Bai1.1doGET&apos;" description="Rename resource &apos;doGET&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/doGET" name="Bai1.1doGET" stamp="1705761926226" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;doPOST&apos; to &apos;Bai1.2doPOST&apos;" description="Rename resource &apos;doPOST&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/doPOST" name="Bai1.2doPOST" stamp="1705761938041" updateReferences="true"/>
+</session>
