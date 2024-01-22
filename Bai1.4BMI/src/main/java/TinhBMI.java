@@ -24,7 +24,7 @@ public class TinhBMI extends HttpServlet {
                 + "<input type=\"text\" name=\"height\"><br>\r\n"
                 + "<label>Cân nặng:</label>"
                 + "<input type=\"text\" name=\"weight\"><br>"
-                + "<input type=\"submit\" value=\"Gửi đi\">"
+                + "<input type=\"submit\" value=\"Tính\">"
                 + "</form>";
         traVe.append(noiDungHTML);
     }
@@ -45,7 +45,7 @@ public class TinhBMI extends HttpServlet {
 
                 double bmi = weight / (height * height);
 
-                traVe.append("Chỉ số BMI của bạn là: " + bmi);
+                traVe.append("<br>Chỉ số BMI của bạn là: " + bmi);
             } catch (NumberFormatException e) {
                 traVe.append("Vui lòng nhập chiều cao và cân nặng là số hợp lệ.");
             }

@@ -1,0 +1,28 @@
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+@WebServlet("/AboutMe")
+public class AboutMe extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html");
+        PrintWriter traVe = response.getWriter();
+        String noiDungHTML = "<form method=\"post\" action=\"/Bai1.3AboutMe/AboutMe\">"
+                + "<img src=\"hinh1.jpg\" alt=\"Hình ảnh giới thiệu\"><br>"
+                + "<label>Giới thiệu</label><br>"
+                + "<label>Trần Quốc Khánh</label><br>"
+                + "<label>Công nghệ thông tin</label><br>"
+                + "<label>63CNTT-CLC2</label><br>"
+                + "<label>63132166</label><br>"
+                + "</form>";
+        traVe.append(noiDungHTML);
+    }
+}

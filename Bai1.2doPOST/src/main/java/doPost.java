@@ -31,9 +31,9 @@ public class doPost extends HttpServlet {
 		String value2 =request.getParameter("lname");
 		PrintWriter traVe = response.getWriter();
 		traVe.append("Bạn vừa gửi yêu cầu dạng POST, đây là đáp ứng của tôi");
-		traVe.append("Giá trị tham số fname =");
+		traVe.append("<br>Giá trị tham số fname =");
 		traVe.append(value1);
-		traVe.append("Giá trị tham số lname =");
+		traVe.append("<br>Giá trị tham số lname =");
 		traVe.append(value2);
 	}
 

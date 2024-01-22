@@ -18,7 +18,7 @@ public class doGet extends HttpServlet {
 		PrintWriter traVe = response.getWriter();
 		traVe.append("Giá trị tham số param1 =");
 		traVe.append(value1);
-		traVe.append("Giá trị tham số param2 =");
+		traVe.append("<br>Giá trị tham số param2 =");
 		traVe.append(value2);
 	}
 }
