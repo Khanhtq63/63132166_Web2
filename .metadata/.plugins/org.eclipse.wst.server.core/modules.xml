@@ -8,5 +8,6 @@
   <module moduleId="org.eclipse.jst.jee.server:Bai1.4BMI" serverId="Tomcat v10.1 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:Bai1.2doPOST" serverId="Tomcat v10.1 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:Bai1.3AboutMe" serverId="Tomcat v10.1 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:Bai2.3.1LoginForm" serverId="Tomcat v10.1 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:Bai2.2HelloJSP" serverId="Tomcat v10.1 Server at localhost"/>
 </modules>

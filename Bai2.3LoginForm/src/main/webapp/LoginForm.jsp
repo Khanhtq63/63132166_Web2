@@ -60,8 +60,8 @@
     <div class="login-container">
         <h2>Login</h2>
         <form action="login.php" method="post">
-            <input type="text" name="tên đăng nhập" placeholder="Username" required>
-            <input type="password" name="mật khẩu" placeholder="Password" required>
+            <input type="text" name="tên đăng nhập" placeholder="Tên đăng nhập" required>
+            <input type="password" name="mật khẩu" placeholder="Mật khẩu" required>
             <input type="submit" value="Đăng nhập">
         </form>
     </div>
