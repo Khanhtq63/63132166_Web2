@@ -4882,3 +4882,6 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact net.minidev:j
 2024-03-05 17:16:02,197 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\63132166_Web2\SpringMVCVD323\src\main\resources
 2024-03-05 17:16:02,205 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2024-03-05 17:16:02,206 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\63132166_Web2\SpringMVCVD323\src\test\resources
+2024-03-05 17:18:40,518 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@47b6184b{STOPPING}[12.0.3,sto=0]
+2024-03-05 17:18:40,527 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@15216532{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
+2024-03-07 13:48:47,316 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
