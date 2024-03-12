@@ -10565,3 +10565,21 @@ java.lang.Exception: Resource '/SpringBootSinhVien/src/main/java/test/java/thomc
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1432)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-03-12 16:51:02.778
+!MESSAGE Classpath changed for project: SpringBootSinhVien-1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-03-12 16:51:02.779
+!MESSAGE Boot project ADDED: SpringBootSinhVien-1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-03-12 16:51:03.213
+!MESSAGE Classpath changed for project: SpringBootSinhVien-1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-03-12 16:58:15.145
+!MESSAGE Classpath changed for project: SpringBootSubmitForm
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-03-12 16:58:15.145
+!MESSAGE Boot project ADDED: SpringBootSubmitForm
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-03-12 16:58:16.537
+!MESSAGE Classpath changed for project: SpringBootSubmitForm
