@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar Example</title>
+    <title>Navbar và Carousel Example</title>
+    <!-- Đường dẫn tới thư viện Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         /* CSS để tạo navbar */
         .navbar {
@@ -39,10 +41,49 @@
     <a href="#contact">Liên lạc</a>
 </div>
 
-<div style="padding:20px;margin-top:30px;background-color:#1abc9c;height:1500px;">
-    <h2>Nội dung trang</h2>
-    <p>Đây là nội dung của trang.</p>
+<!-- Carousel 1 -->
+<div id="carouselExample1" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://via.placeholder.com/800x400?text=Carousel+Image+1" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Carousel 1</h5>
+                <p>Nội dung của Carousel 1</p>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- Carousel 2 -->
+<div id="carouselExample2" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://via.placeholder.com/800x400?text=Carousel+Image+2" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Carousel 2</h5>
+                <p>Nội dung của Carousel 2</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Carousel 3 -->
+<div id="carouselExample3" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://via.placeholder.com/800x400?text=Carousel+Image+3" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Carousel 3</h5>
+                <p>Nội dung của Carousel 3</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Đường dẫn tới thư viện Bootstrap JavaScript và jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
