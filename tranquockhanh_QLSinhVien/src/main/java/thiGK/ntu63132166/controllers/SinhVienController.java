@@ -12,8 +12,8 @@ import thiGK.ntu63132166.models.*;
 
 @Controller
 public class SinhVienController {	
-	@GetMapping("/danhsachSV")
+	@GetMapping("/index")
 	public String listStudent(ModelMap mm) {
-	    return "sinhvien_getAll";
+	    return "index";
 	}
 }
