@@ -31,21 +31,43 @@
             background-color: #04AA6D;
             color: white;
         }
+
+        /* Đổi màu nền thành màu trắng */
+        .bg-white {
+            background-color: #fff !important;
+        }
     </style>
 </head>
 <body>
 
 <div class="navbar">
     <a class="active" href="#home">Trang chủ</a>
-    <a href="#add_student">Thêm Sinh viên</a>
+    <a href="/dsSinhVien">Thêm Sinh viên</a>
     <a href="#contact">Liên lạc</a>
 </div>
 
+<!-- Phần chứa cards -->
+<div class="container mt-5 bg-white">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/images/avatar1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Trần Quốc Khánh</h5>
+                    <p class="card-text">Lớp: 63CNTT-CLC</p>
+                    <p class="card-text">Khoa: Công nghệ thông tin</p>
+                    <p class="card-text">Trường: Đại học Nha Trang</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Carousel 1 -->
-<div id="carouselExample1" class="carousel slide" data-ride="carousel">
+<div id="carouselExample1" class="carousel slide mt-5" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="/images/image1.png" class="d-block w-100" alt="...">
+            <img src="https://via.placeholder.com/800x400?text=Carousel+Image+1" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <h5>Carousel 1</h5>
                 <p>Nội dung của Carousel 1</p>
