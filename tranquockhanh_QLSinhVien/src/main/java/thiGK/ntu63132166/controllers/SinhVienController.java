@@ -30,20 +30,20 @@ public class SinhVienController {
 	// hard-code dữ liệu
 		static List<DTOSinhVien> dsSinhVien=  new ArrayList<DTOSinhVien>();
 		static {
-				dsSinhVien.add(new DTOSinhVien("0001", "Trần Quốc Khánh","10"));
-				dsSinhVien.add(new DTOSinhVien("0002", "Giáp Văn Tài","9"));
+				dsSinhVien.add(new DTOSinhVien("63132166", "Trần Quốc Khánh","10"));
+				dsSinhVien.add(new DTOSinhVien("63132155", "Giáp Văn Tài","9"));
 			 }
-	@GetMapping("/dsSinhVien")
+	@GetMapping("/StudentList")
 	public String listStudent(ModelMap mm) {
 	    return "StudentList";
 	}
-	@GetMapping("/themMoiSV")
+	@GetMapping("/AddSV")
 	public String showForm(Model mm) {
         DTOSinhVien sinhvienNull = new DTOSinhVien();
         mm.addAttribute("svDTO", sinhvienNull);
         return "themSinhVien_form";
     }
-	@PostMapping("/themMoiSV")
+	@PostMapping("/AddSV")
 	public String submitForm(@ModelAttribute("svDTO") DTOSinhVien sv) {
 	    return "themSinhVien_OK";
 	}
