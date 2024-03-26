@@ -41,10 +41,10 @@ public class SinhVienController {
 	public String showForm(Model mm) {
         DTOSinhVien sinhvienNull = new DTOSinhVien();
         mm.addAttribute("svDTO", sinhvienNull);
-        return "themSinhVien_form";
+        return "AddSV";
     }
 	@PostMapping("/AddSV")
 	public String submitForm(@ModelAttribute("svDTO") DTOSinhVien sv) {
-	    return "themSinhVien_OK";
+	    return "Add_OK";
 	}
 }
