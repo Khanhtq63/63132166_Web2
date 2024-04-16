@@ -12,4 +12,5 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="org.springframework.ui.ModelMap"/>
     <fullyQualifiedTypeName name="org.o7planning.thymeleaf.model.Person"/>
+    <fullyQualifiedTypeName name="thiGK.ntu63132166.models.DTOSinhVien"/>
 </qualifiedTypeNameHistroy>
