@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My Page</title>
+</head>
+<body>
+    <table width=100% height=100% border=1px>
+    	<tr> 
+    		<td colspan=2> 
+    			<div th:replace="~{fragments/headerfile :: header}">Header ở đây</div>
+    		</td>
+    	</tr>
+    	<tr> 
+    		<td colspan=2> 
+    			<div th:replace="~{fragments/menu :: nav}">Menu ở đây</div>
+    		</td>
+    	</tr>
+    	<tr> 
+    		<td> 
+		    	<main>
+		        			ĐÂY LÀ TRANG SERVIVE
+		   		</main>
+    		</td>
+    		<td width=300px >
+    			<div th:replace="~{fragments/sidebar :: aside}"> Siderbar ở đây</div> 
+    		</td>
+    	</tr>
+    	
+    	<tr> 
+    		<td colspan=2> 
+    			<div th:replace="~{fragments/footerfile :: footer}">Footer ở đây</div>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td colspan=2>
+    			<div th:replace="~{fragments/fragment-items :: info-box}"></div>
+    			<div th:replace="~{fragments/fragment-items :: chan-trang}"></div>
+    		</td>
+    	</tr>
+    </table>
+    
+</body>
+</html>
