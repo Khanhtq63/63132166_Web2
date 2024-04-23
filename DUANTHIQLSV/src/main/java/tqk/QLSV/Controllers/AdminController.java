@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class AdminController {
 	@GetMapping("/")
 	public String Dashboard() {
-		return "Dashboard.html";
+		return "index.html";
 	}
 	@GetMapping("/Student")
 	public String Student() {
