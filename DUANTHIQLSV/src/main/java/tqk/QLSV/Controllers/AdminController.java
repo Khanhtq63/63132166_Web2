@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class AdminController {
 	@GetMapping("/")
-	public String Dashboard() {
+	public String TrangChu() {
 		return "index.html";
 	}
 	@GetMapping("/sinhvien")
