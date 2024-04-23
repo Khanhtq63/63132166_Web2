@@ -1,5 +1,9 @@
 package tqk.QLSV.Repositories;
 
-public interface SinhVienRepository  {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import tqk.QLSV.Models.SinhVienModel;
+
+public interface SinhVienRepository extends JpaRepository<SinhVienModel, String> {
 
 }

@@ -13,7 +13,7 @@ public class SinhVienModel {
 	
 	@Id
 	@Column(name="MASV")
-	private int maSinhVien;
+	private String maSinhVien;
 	@Column(name="HOTEN")
 	private String hoTen;
 	@Column(name="NGAYSINH")
@@ -26,10 +26,11 @@ public class SinhVienModel {
 	private int maLop;
 	
 	//getter, setter
-	public int getMaSinhVien() {
+	
+	public String getMaSinhVien() {
 		return maSinhVien;
 	}
-	public void setMaSinhVien(int maSinhVien) {
+	public void setMaSinhVien(String maSinhVien) {
 		this.maSinhVien = maSinhVien;
 	}
 	public String getHoTen() {
@@ -62,6 +63,4 @@ public class SinhVienModel {
 	public void setMaLop(int maLop) {
 		this.maLop = maLop;
 	}
-	
-	
 }

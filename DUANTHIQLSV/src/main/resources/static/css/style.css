@@ -1,1 +1,58 @@
 h1 {text-decoration: blink;}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background: #333;
+    padding-top: 20px;
+    color: #fff;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#content {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+#header {
+    background: #555;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #444;
+    padding: 10px;
+}
+
+#navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#navbar a:hover {
+    background: #666;
+}
