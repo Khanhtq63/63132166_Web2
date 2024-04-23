@@ -42,7 +42,7 @@ body {
     border:1px solid #f3f3f3;
 }
 h2 {
-    color: #f00;
+    color: rgb(0, 128, 255);
 }
 h4 {
     padding-top:10px;
@@ -197,7 +197,7 @@ color: #8d8888;
 
 
 .user-image {
-    margin: 25px auto;
+margin: 25px auto;
 -webkit-border-radius: 10px;
 -moz-border-radius: 10px;
 border-radius: 10px;
@@ -206,7 +206,7 @@ max-width:170px;
 }
 
 .navbar-cls-top .navbar-brand {
-	color: #fff;
+color: #fff;
 background: rgb(0, 128, 255);
 width: 260px;
 text-align: center;
@@ -215,7 +215,7 @@ font-size: 30px;
 font-weight: 700;
 }
 .active-menu {
-    background-color:rgb(0, 128, 192)!important;
+    background-color:#C90000!important;
 }
 
 .arrow {
