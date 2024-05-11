@@ -19,11 +19,11 @@ public class SinhVienModel {
 	@Column(name="NGAYSINH")
 	private Date ngaySinh;
 	@Column(name="GIOITINH")
-	private String gioiTInh;
+	private String gioiTinh;
 	@Column(name="NOISINH")
 	private String noiSinh;
 	@Column(name="MALOP")
-	private int maLop;
+	private String maLop;
 	
 	//getter, setter
 	
@@ -46,10 +46,10 @@ public class SinhVienModel {
 		this.ngaySinh = ngaySinh;
 	}
 	public String getGioiTInh() {
-		return gioiTInh;
+		return gioiTinh;
 	}
 	public void setGioiTInh(String gioiTInh) {
-		this.gioiTInh = gioiTInh;
+		this.gioiTinh = gioiTInh;
 	}
 	public String getNoiSinh() {
 		return noiSinh;
@@ -57,10 +57,18 @@ public class SinhVienModel {
 	public void setNoiSinh(String noiSinh) {
 		this.noiSinh = noiSinh;
 	}
-	public int getMaLop() {
+	public String getMaLop() {
 		return maLop;
 	}
-	public void setMaLop(int maLop) {
+	public void setMaLop(String maLop) {
 		this.maLop = maLop;
 	}
+	@Override
+	public String toString() {
+		return "SinhVienModel [maSinhVien=" + maSinhVien + ", hoTen=" + hoTen + ", ngaySinh=" + ngaySinh + ", gioiTinh="
+				+ gioiTinh + ", noiSinh=" + noiSinh + ", maLop=" + maLop + "]";
+	}
+	
+	
+	
 }
