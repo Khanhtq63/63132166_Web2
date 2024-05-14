@@ -45,11 +45,11 @@ public class SinhVienModel {
 	public void setNgaySinh(Date ngaySinh) {
 		this.ngaySinh = ngaySinh;
 	}
-	public String getGioiTInh() {
+	public String getGioiTinh() {
 		return gioiTinh;
 	}
-	public void setGioiTInh(String gioiTInh) {
-		this.gioiTinh = gioiTInh;
+	public void setGioiTinh(String gioiTinh) {
+		this.gioiTinh = gioiTinh;
 	}
 	public String getNoiSinh() {
 		return noiSinh;

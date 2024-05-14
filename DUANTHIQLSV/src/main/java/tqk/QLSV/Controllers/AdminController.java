@@ -16,10 +16,6 @@ public class AdminController {
 	public String TrangChu() {
 		return "index.html";
 	}
-	@GetMapping("/dragon")
-	public String SinhVien() {
-		return "SinhVien.html";
-	}
 	@GetMapping("/khoahoc")
 	public String KhoaHoc() {
 		return "KhoaHoc.html";
