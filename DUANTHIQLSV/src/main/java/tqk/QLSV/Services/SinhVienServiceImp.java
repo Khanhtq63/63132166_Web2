@@ -18,11 +18,16 @@ public class SinhVienServiceImp implements SinhVienService {
 		
 		 return sinhVienRepository.findAll();
 	}
+	
+	public SinhVienServiceImp(SinhVienRepository sinhVienRepository) {
+		super();
+		this.sinhVienRepository = sinhVienRepository;
+	}
 
 	@Override
-	public SinhVienModel getSinhVienByID(String maSV) {
+	public SinhVienModel getSinhVienByID(String maSinhVien) {
 		
-		Optional <SinhVienModel> opt = sinhVienRepository.findById(maSV);
+		Optional <SinhVienModel> opt = sinhVienRepository.findById(maSinhVien);
 		if (opt.isPresent()) return opt.get();
 		else return null;
 	}
@@ -36,6 +41,19 @@ public class SinhVienServiceImp implements SinhVienService {
 	public SinhVienModel UpdateSinhVien(SinhVienModel sinhvien) {
 		return sinhVienRepository.save(sinhvien);
 	}
+
+	@Override
+	public void DeleteStudentByID(String maSinhVien) {
+		sinhVienRepository.deleteById(maSinhVien);
+	}
+
+	@Override
+	public List<SinhVienModel> SearchSinhVienByName(String hoTen) {
+		return sinhVienRepository.findByHoTenContainingIgnoreCase(hoTen);
+	}
+	
+	
+	
 
 	
 	

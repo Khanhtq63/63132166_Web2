@@ -63,7 +63,7 @@
             <div id="page-inner">                      
                 <h1>Danh sách Sinh Viên</h1>
               <!-- Add Sinh Viên Form -->
-				<form th:action="@{/sinhvien}" th:object="${DSSinhVien}" method="post">
+				<form th:action="@{/SinhVien/sav}" th:object="${DSSinhVien}" method="post">
     				<div class="form-group">
         				<label for="maSinhVien">Mã SV:</label>
         				<input type="text" class="form-control" th:field="*{maSinhVien}" name="maSinhVien">
@@ -93,30 +93,6 @@
     				</div>
     					<button type="submit" class="btn btn-primary">Thêm Sinh Viên</button>
 				</form>
-
-                <!-- Danh sách Sinh Viên Table -->
-                <table class="table table-striped table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <th>Mã SV</th>
-                            <th>Tên SV</th>
-                            <th>Ngày sinh</th>
-                            <th>Giới tính</th>
-                            <th>Nơi sinh</th>
-                            <th>Mã lớp</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr th:each="sv : ${DSSinhVien}"> 
-                            <td th:text="${sv.maSinhVien}" />
-                            <td th:text="${sv.hoTen}" />
-                            <td th:text="${sv.ngaySinh}" />
-                            <td th:text="${sv.gioiTinh}" />
-                            <td th:text="${sv.noiSinh}" />
-                            <td th:text="${sv.maLop}" />
-                        </tr>
-                    </tbody>
-                </table>
             </div>
             <!-- /. PAGE INNER  -->
         </div>

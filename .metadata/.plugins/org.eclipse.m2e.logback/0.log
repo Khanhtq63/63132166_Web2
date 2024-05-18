@@ -7724,3 +7724,349 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact net.minidev:j
 2024-05-13 16:05:11,944 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@6dba1fbd{STOPPING}[12.0.3,sto=0]
 2024-05-13 16:05:11,949 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@39f7697c{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
 2024-05-13 18:58:21,795 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-05-14 14:43:43,714 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-05-14 14:46:15,352 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 14:46:15,390 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 14:46:15,443 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 14:46:17,856 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 14:46:17,872 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 14:46:17,877 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\HelloSpring\src\test\resources
+2024-05-14 14:46:19,357 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 14:46:19,386 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 34 resources from src\main\resources to target\classes
+2024-05-14 14:46:19,454 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\QuanLyBanHangMNK\src\test\resources
+2024-05-14 14:46:20,883 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 14:46:20,904 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 24 resources from src\main\resources to target\classes
+2024-05-14 14:46:20,941 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\SpringBootCSS_JS_IMAGE\src\test\resources
+2024-05-14 14:46:22,314 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 14:46:22,345 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2024-05-14 14:46:22,354 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\SpringBootSinhVien\src\test\resources
+2024-05-14 14:46:23,651 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 14:46:23,671 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2024-05-14 14:46:23,678 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\SpringBootSubmitForm\src\test\resources
+2024-05-14 14:46:24,941 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-05-14 14:46:24,941 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2024-05-14 14:46:24,956 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2024-05-14 14:46:24,988 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-05-14 14:46:24,988 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\63132166_Web2\SpringBootThymeleaf\src\test\resources
+2024-05-14 14:46:26,721 [Worker-3: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-14 14:46:26,723 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 14:46:26,726 [Worker-3: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-14 14:46:26,727 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\SpringMVCBai1Maven\src\test\resources
+2024-05-14 14:46:27,572 [Worker-4: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-14 14:46:27,574 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 14:46:27,576 [Worker-4: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-14 14:46:27,577 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\SpringMVCVD311\src\test\resources
+2024-05-14 14:46:27,733 [Worker-4: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-14 14:46:27,735 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 14:46:27,738 [Worker-4: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-14 14:46:27,739 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\SpringMVCVD322\src\test\resources
+2024-05-14 14:46:28,243 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-05-14 14:46:28,243 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\63132166_Web2\SpringMVCVD323\src\main\resources
+2024-05-14 14:46:28,247 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-05-14 14:46:28,247 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\63132166_Web2\SpringMVCVD323\src\test\resources
+2024-05-14 14:46:30,584 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 14:46:30,608 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 7 resources from src\main\resources to target\classes
+2024-05-14 14:46:30,622 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\tranquockhanh_QLSinhVien\src\test\resources
+2024-05-14 15:39:30,297 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-12.0.3; built: 2023-10-27T03:25:22.284Z; git: a873259fd5af141dedaa6c7fa8fe8fbdedce0d61; jvm 20.0.2+9-78
+2024-05-14 15:39:30,372 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started oeje8n.ContextHandler$CoreContextHandler@36f6b7cb{/help,/help,b=null,a=AVAILABLE,h=oeje8n.ContextHandler$CoreContextHandler$CoreToNestedHandler@2cce23a3{STARTED}}
+2024-05-14 15:39:30,373 [Start Help Server] INFO  o.e.j.s.DefaultSessionIdManager - Session workerName=node0
+2024-05-14 15:39:30,406 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@44735e71{HTTP/1.1, (http/1.1)}{127.0.0.1:52443}
+2024-05-14 15:39:30,425 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started oejs.Server@5bc34d61{STARTING}[12.0.3,sto=0] @3364428ms
+2024-05-14 15:39:46,867 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 15:39:46,878 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 15:39:46,895 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 15:40:19,095 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 15:40:19,103 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 15:40:19,116 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 15:43:27,584 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 15:43:27,591 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 15:43:27,597 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 15:46:56,347 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 15:46:56,356 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 15:46:56,366 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 15:47:17,081 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 15:47:17,085 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 15:47:17,090 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 15:49:39,587 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 15:49:39,597 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 15:49:39,605 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 15:50:16,310 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 15:50:16,317 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 15:50:16,327 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 15:50:29,500 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 15:50:29,507 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 15:50:29,517 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 15:51:31,962 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 15:51:31,969 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 15:51:31,974 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 15:52:32,102 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 15:52:32,106 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 15:52:32,110 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 16:53:51,567 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 16:53:51,572 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 16:53:51,576 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 16:54:03,441 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 16:54:03,451 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 16:54:03,462 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 16:54:13,667 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 16:54:13,676 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 16:54:13,685 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 22:27:53,779 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 22:27:53,786 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 22:27:53,796 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 22:31:11,343 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 22:31:11,346 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 22:31:11,350 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 22:36:24,505 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 22:36:24,508 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 22:36:24,511 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 22:36:48,789 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 22:36:48,793 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 22:36:48,798 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 22:39:43,244 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 22:39:43,251 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 22:39:43,258 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 22:40:15,469 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 22:40:15,479 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 22:40:15,485 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 22:40:38,730 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 22:40:38,735 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 22:40:38,742 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 22:42:01,290 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 22:42:01,295 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 22:42:01,301 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 22:42:05,641 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 22:42:05,648 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 22:42:05,654 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 22:43:11,748 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 22:43:11,753 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 22:43:11,759 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 22:45:15,106 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 22:45:15,111 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 22:45:15,117 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 22:45:24,057 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 22:45:24,063 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 22:45:24,073 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 22:47:55,404 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 22:47:55,409 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 22:47:55,415 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 22:51:22,671 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 22:51:22,677 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 22:51:22,685 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 22:52:14,776 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 22:52:14,778 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 22:52:14,782 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 22:53:16,775 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 22:53:16,778 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 22:53:16,780 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 22:55:20,978 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 22:55:20,985 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 22:55:20,994 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 22:55:36,579 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 22:55:36,585 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 22:55:36,594 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 22:55:51,550 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 22:55:51,553 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 22:55:51,557 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 23:01:54,600 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 23:01:54,610 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 23:01:54,616 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 23:02:22,840 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 23:02:22,846 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 23:02:22,852 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 23:03:13,611 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 23:03:13,614 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 23:03:13,618 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 23:03:24,967 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-14 23:03:24,970 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 23:03:24,973 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 23:04:41,343 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 23:04:41,358 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 23:04:41,367 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 23:04:48,599 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 23:04:48,605 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 23:04:48,612 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 23:07:57,665 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 23:07:57,670 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 23:07:57,680 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 23:08:12,638 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 23:08:12,644 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 23:08:12,649 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 23:09:46,409 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 23:09:46,419 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 23:09:46,429 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 23:13:22,851 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 23:13:22,858 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 23:13:22,865 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 23:13:39,482 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 23:13:39,488 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 23:13:39,497 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 23:18:35,434 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 23:18:35,441 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 23:18:35,447 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 23:18:52,787 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 23:18:52,792 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 23:18:52,799 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 23:18:59,608 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 23:18:59,612 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 23:18:59,619 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 23:21:40,020 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-14 23:21:40,026 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-14 23:21:40,032 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-14 23:21:51,449 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@5bc34d61{STOPPING}[12.0.3,sto=0]
+2024-05-14 23:21:51,460 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@44735e71{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
+2024-05-17 09:08:27,880 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-05-17 09:14:06,409 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 09:14:06,441 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-17 09:14:06,459 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 09:25:34,116 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 09:25:34,143 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-17 09:25:34,155 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 09:26:16,645 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-12.0.3; built: 2023-10-27T03:25:22.284Z; git: a873259fd5af141dedaa6c7fa8fe8fbdedce0d61; jvm 20.0.2+9-78
+2024-05-17 09:26:16,731 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started oeje8n.ContextHandler$CoreContextHandler@27ed0ca5{/help,/help,b=null,a=AVAILABLE,h=oeje8n.ContextHandler$CoreContextHandler$CoreToNestedHandler@77c6e2a9{STARTED}}
+2024-05-17 09:26:16,732 [Start Help Server] INFO  o.e.j.s.DefaultSessionIdManager - Session workerName=node0
+2024-05-17 09:26:16,774 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@73ff8511{HTTP/1.1, (http/1.1)}{127.0.0.1:49245}
+2024-05-17 09:26:16,803 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started oejs.Server@56bfc2cd{STARTING}[12.0.3,sto=0] @1091542ms
+2024-05-17 09:28:01,633 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 09:28:01,642 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 31 resources from src\main\resources to target\classes
+2024-05-17 09:28:01,652 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 09:29:32,302 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-17 09:29:32,309 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 09:29:32,315 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 09:40:01,073 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 09:40:01,080 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 32 resources from src\main\resources to target\classes
+2024-05-17 09:40:01,087 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 09:40:09,882 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-17 09:40:09,885 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 09:40:09,889 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 09:42:11,887 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 09:42:11,892 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 32 resources from src\main\resources to target\classes
+2024-05-17 09:42:11,901 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 09:43:40,799 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-17 09:43:40,803 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 09:43:40,807 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 09:47:40,707 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-17 09:47:40,711 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 09:47:40,716 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 09:56:19,644 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 09:56:19,653 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 32 resources from src\main\resources to target\classes
+2024-05-17 09:56:19,663 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 09:56:51,346 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-17 09:56:51,349 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 09:56:51,353 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 10:00:35,244 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-17 10:00:35,247 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 10:00:35,252 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 10:01:05,207 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-17 10:01:05,211 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 10:01:05,215 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 10:01:26,843 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-17 10:01:26,846 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 10:01:26,852 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 10:01:44,399 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-17 10:01:44,401 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 10:01:44,405 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 10:06:31,609 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 10:06:31,615 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 32 resources from src\main\resources to target\classes
+2024-05-17 10:06:31,623 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 10:07:28,312 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 10:07:28,319 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 32 resources from src\main\resources to target\classes
+2024-05-17 10:07:28,331 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 10:07:49,073 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 10:07:49,079 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 32 resources from src\main\resources to target\classes
+2024-05-17 10:07:49,088 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 10:08:39,285 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-17 10:08:39,290 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 10:08:39,294 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 10:09:13,989 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-17 10:09:13,991 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 10:09:13,994 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 10:11:28,982 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 10:11:28,995 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 32 resources from src\main\resources to target\classes
+2024-05-17 10:11:29,009 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 10:12:58,827 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 10:12:58,834 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 32 resources from src\main\resources to target\classes
+2024-05-17 10:12:58,842 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 10:13:13,271 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 10:13:13,280 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 32 resources from src\main\resources to target\classes
+2024-05-17 10:13:13,290 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 10:13:30,680 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 10:13:30,688 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 32 resources from src\main\resources to target\classes
+2024-05-17 10:13:30,697 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 10:19:20,683 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 10:19:20,690 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 32 resources from src\main\resources to target\classes
+2024-05-17 10:19:20,697 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 10:20:00,173 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 10:20:00,182 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 32 resources from src\main\resources to target\classes
+2024-05-17 10:20:00,190 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 10:48:34,746 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-17 10:48:34,749 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 10:48:34,753 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 15:01:31,432 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-17 15:01:31,444 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-17 15:01:31,454 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-17 15:01:43,722 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@56bfc2cd{STOPPING}[12.0.3,sto=0]
+2024-05-17 15:01:43,730 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@73ff8511{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
+2024-05-18 15:05:24,607 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-05-18 15:25:23,833 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-18 15:25:23,902 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 32 resources from src\main\resources to target\classes
+2024-05-18 15:25:23,921 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-18 15:29:33,010 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-12.0.3; built: 2023-10-27T03:25:22.284Z; git: a873259fd5af141dedaa6c7fa8fe8fbdedce0d61; jvm 20.0.2+9-78
+2024-05-18 15:29:33,070 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started oeje8n.ContextHandler$CoreContextHandler@16f41647{/help,/help,b=null,a=AVAILABLE,h=oeje8n.ContextHandler$CoreContextHandler$CoreToNestedHandler@50e7ee7{STARTED}}
+2024-05-18 15:29:33,071 [Start Help Server] INFO  o.e.j.s.DefaultSessionIdManager - Session workerName=node0
+2024-05-18 15:29:33,100 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@cee5ecb{HTTP/1.1, (http/1.1)}{127.0.0.1:52274}
+2024-05-18 15:29:33,121 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started oejs.Server@42811a9a{STARTING}[12.0.3,sto=0] @1469831ms
+2024-05-18 15:32:38,659 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-18 15:32:38,665 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 32 resources from src\main\resources to target\classes
+2024-05-18 15:32:38,676 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-18 15:44:03,666 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-18 15:44:03,677 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 32 resources from src\main\resources to target\classes
+2024-05-18 15:44:03,703 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-18 15:44:21,909 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-18 15:44:21,913 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-18 15:44:21,917 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-18 15:46:24,266 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-18 15:46:24,269 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-18 15:46:24,273 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-18 15:50:26,543 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-18 15:50:26,548 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-18 15:50:26,552 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-18 15:50:35,489 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-18 15:50:35,492 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-18 15:50:35,496 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-18 15:50:38,940 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-18 15:50:38,944 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-18 15:50:38,948 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-18 18:44:08,061 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-18 18:44:08,064 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-18 18:44:08,067 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-18 19:04:45,200 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-18 19:04:45,228 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 33 resources from src\main\resources to target\classes
+2024-05-18 19:04:45,238 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-18 19:11:25,700 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-18 19:11:25,708 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 33 resources from src\main\resources to target\classes
+2024-05-18 19:11:25,717 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-18 19:12:32,374 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-18 19:12:32,380 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 33 resources from src\main\resources to target\classes
+2024-05-18 19:12:32,389 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-18 19:12:51,039 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-18 19:12:51,044 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 33 resources from src\main\resources to target\classes
+2024-05-18 19:12:51,051 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-18 19:13:13,197 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-18 19:13:13,204 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 33 resources from src\main\resources to target\classes
+2024-05-18 19:13:13,215 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-18 19:13:44,506 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-18 19:13:44,513 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 33 resources from src\main\resources to target\classes
+2024-05-18 19:13:44,524 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-18 19:15:01,224 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-18 19:15:01,229 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 33 resources from src\main\resources to target\classes
+2024-05-18 19:15:01,237 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-18 19:15:22,211 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-18 19:15:22,214 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-18 19:15:22,217 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-18 19:17:07,397 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-18 19:17:07,402 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 33 resources from src\main\resources to target\classes
+2024-05-18 19:17:07,410 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources
+2024-05-18 19:18:36,176 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-18 19:18:36,179 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-18 19:18:36,182 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\63132166_Web2\DUANTHIQLSV\src\test\resources

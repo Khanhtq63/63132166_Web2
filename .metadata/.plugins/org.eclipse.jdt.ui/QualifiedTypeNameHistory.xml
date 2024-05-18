@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="tqk.springmvc.WelcomeController"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
     <fullyQualifiedTypeName name="java.security.PublicKey"/>
@@ -24,21 +23,25 @@
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="tqk.QLSV.Models.SinhVIenModel"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
-    <fullyQualifiedTypeName name="tqk.QLSV.Repositories.SinhVienRepository"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
     <fullyQualifiedTypeName name="ch.qos.logback.core.model.Model"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
     <fullyQualifiedTypeName name="tqk.QLSV.Services.SinhVienService"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="tqk.QLSV.Controllers.SinhVienController"/>
-    <fullyQualifiedTypeName name="tqk.QLSV.Models.SinhVienModel"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="tqk.QLSV.Services.SinhVienServiceImp"/>
+    <fullyQualifiedTypeName name="tqk.QLSV.Repositories.SinhVienRepository"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+    <fullyQualifiedTypeName name="tqk.QLSV.Models.SinhVienModel"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
 </qualifiedTypeNameHistroy>

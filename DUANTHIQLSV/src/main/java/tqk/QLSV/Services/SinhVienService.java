@@ -10,10 +10,14 @@ public interface SinhVienService {
 	
 	public SinhVienModel SaveSinhVien(SinhVienModel sinhvien);
 	
-	public SinhVienModel getSinhVienByID(String maSV);
+	public SinhVienModel getSinhVienByID(String maSinhVien);
 	
 	public SinhVienModel UpdateSinhVien(SinhVienModel sinhvien);
 	
-
+	void DeleteStudentByID(String maSinhVien);
+	
+	List<SinhVienModel> SearchSinhVienByName(String hoTen);
+	
+	
 
 }

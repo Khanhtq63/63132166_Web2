@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UPDATE SINHVIEN</title>
+    <!-- BOOTSTRAP STYLES-->
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLES-->
+    <link href="/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <style>
+        /* Add any additional styles here */
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Admin</a> 
+            </div>
+            <div style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;"> Last access : 23 April 2024 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+        </nav>   
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li class="text-center">   
+                        <img src="/img/find_user.png" class="user-image img-responsive"/>
+                    </li>							
+                    <li>
+                        <a  href="/"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a  href="/SinhVien/all"><i class="fa fa-desktop fa-3x"></i> Sinh viên</a>
+                    </li>
+                    <li>
+                        <a  href="tab-panel.html"><i class="fa fa-qrcode fa-3x"></i> Lớp học</a>
+                    </li>
+                    <li  >
+                        <a  href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i> Khóa học</a>
+                    </li>	
+                    <li  >
+                        <a  href="table.html"><i class="fa fa-table fa-3x"></i>Môn học</a>
+                    </li>
+                    <li  >
+                        <a  href="form.html"><i class="fa fa-edit fa-3x"></i> Điểm số </a>
+                    </li>				
+                </ul>
+            </div>
+        </nav>  
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">                      
+                <h1>Danh sách Sinh Viên</h1>
+              <!-- Add Sinh Viên Form -->
+				<form th:action="@{/SinhVien/sav}" th:object="${DSSinhVien}" method="post">
+    				<div class="form-group">
+        				<label for="maSinhVien">Mã SV:</label>
+        				<input type="text" class="form-control" th:field="*{maSinhVien}" name="maSinhVien">
+    				</div>
+    				<div class="form-group">
+        				<label for="hoTen">Tên SV:</label>
+       					<input type="text" class="form-control" th:field="*{hoTen}" name="hoTen">
+    				</div>
+    				<div class="form-group">
+       					<label for="ngaySinh">Ngày sinh:</label>
+        				<input type="date" class="form-control" th:field="*{ngaySinh}" name="ngaySinh">
+    				</div>
+    				<div class="form-group">
+        				<label for="gioiTinh">Giới tính:</label>
+        				<select class="form-control" th:field="*{gioiTinh}" name="gioiTinh">
+            				<option value="Nam">Nam</option>
+            				<option value="Nữ">Nữ</option>
+        				</select>
+    				</div>
+    				<div class="form-group">
+        					<label for="noiSinh">Nơi sinh:</label>
+        					<input type="text" class="form-control" th:field="*{noiSinh}" name="noiSinh">
+    				</div>
+    				<div class="form-group">
+        					<label for="maLop">Mã lớp:</label>
+        					<input type="text" class="form-control" th:field="*{maLop}" name="maLop">
+    				</div>
+    					<button type="submit" class="btn btn-primary">Cập Nhật Sinh Viên</button>
+				</form>
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="/js/jquery.metisMenu.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="/js/custom.js"></script>     
+</body>
+</html>

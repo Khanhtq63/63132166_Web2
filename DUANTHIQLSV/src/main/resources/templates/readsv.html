@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STUDENT DETAILS</title>
+    <!-- BOOTSTRAP STYLES-->
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLES-->
+    <link href="/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Admin</a> 
+            </div>
+            <div style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;"> Last access : 23 April 2024 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+        </nav>   
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li class="text-center">   
+                        <img src="/img/find_user.png" class="user-image img-responsive"/>
+                    </li>							
+                    <li>
+                        <a  href="/"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a  href="/SinhVien/all"><i class="fa fa-desktop fa-3x"></i> Sinh viên</a>
+                    </li>
+                    <li>
+                        <a  href="tab-panel.html"><i class="fa fa-qrcode fa-3x"></i> Lớp học</a>
+                    </li>
+                    <li  >
+                        <a  href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i> Khóa học</a>
+                    </li>	
+                    <li  >
+                        <a  href="table.html"><i class="fa fa-table fa-3x"></i>Môn học</a>
+                    </li>
+                    <li  >
+                        <a  href="form.html"><i class="fa fa-edit fa-3x"></i> Điểm số </a>
+                    </li>				
+                </ul>
+            </div>
+        </nav>  
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">                      
+                <h1>Thông tin Sinh Viên</h1>  
+                <table class="table table-striped table-bordered table-hover">
+                    <tr>
+                        <th>Mã SV:</th>
+                        <td th:text="${sinhVien.maSinhVien}"></td>
+                    </tr>
+                    <tr>
+                        <th>Tên SV:</th>
+                        <td th:text="${sinhVien.hoTen}"></td>
+                    </tr>
+                    <tr>
+                        <th>Ngày sinh:</th>
+                        <td th:text="${sinhVien.ngaySinh}"></td>
+                    </tr>
+                    <tr>
+                        <th>Giới tính:</th>
+                        <td th:text="${sinhVien.gioiTinh}"></td>
+                    </tr>
+                    <tr>
+                        <th>Nơi sinh:</th>
+                        <td th:text="${sinhVien.noiSinh}"></td>
+                    </tr>
+                    <tr>
+                        <th>Mã lớp:</th>
+                        <td th:text="${sinhVien.maLop}"></td>
+                    </tr>
+                </table>
+                <a href="/SinhVien/all" class="btn btn-primary">Quay lại</a>
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="/js/jquery.metisMenu.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="/js/custom.js"></script>     
+</body>
+</html>
