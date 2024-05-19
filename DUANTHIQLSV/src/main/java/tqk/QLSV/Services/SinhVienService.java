@@ -2,6 +2,9 @@ package tqk.QLSV.Services;
 
 import java.util.List;
 
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import tqk.QLSV.Models.SinhVienModel;
 
 public interface SinhVienService {
@@ -18,6 +21,7 @@ public interface SinhVienService {
 	
 	List<SinhVienModel> SearchSinhVienByName(String hoTen);
 	
+	Page<SinhVienModel> getSinhVienPage(Pageable pageable);
 	
 
 }

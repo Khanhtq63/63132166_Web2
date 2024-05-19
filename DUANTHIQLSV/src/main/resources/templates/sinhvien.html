@@ -92,12 +92,33 @@
                             <td th:text="${sv.maLop}"></td>
                             <td>
                                 <a th:href="@{'/SinhVien/edit/' + ${sv.maSinhVien}}" class ="btn btn-primary">Cập nhật</a>
-                                <a th:href="@{'/SinhVien/delete/' + ${sv.maSinhVien}}" class ="btn btn-danger">Xóa</a>
+                                <a th:href="@{'/SinhVien/delete/' + ${sv.maSinhVien}}" class ="btn btn-danger" onclick="return confirmDelete()">Xóa</a>
                                 <a th:href="@{'/SinhVien/read/' + ${sv.maSinhVien}}" class ="btn btn-info">Xem</a>
                             </td>
                         </tr>
                     </tbody>
                 </table>
+
+                <!-- Pagination -->
+                <div>
+                    <ul class="pagination">
+                        <li th:classappend="${currentPage == 0} ? 'disabled'">
+                            <a th:href="@{/SinhVien/all(page=${currentPage - 1})}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li th:each="i : ${#numbers.sequence(0, totalPages - 1)}"
+                            th:classappend="${i == currentPage} ? 'active'">
+                            <a th:href="@{/SinhVien/all(page=${i})}" th:text="${i + 1}">1</a>
+                        </li>
+                        <li th:classappend="${currentPage + 1 == totalPages} ? 'disabled'">
+                            <a th:href="@{/SinhVien/all(page=${currentPage + 1})}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
             <!-- /. PAGE INNER  -->
         </div>
@@ -113,5 +134,12 @@
     <script src="/js/jquery.metisMenu.js"></script>
     <!-- CUSTOM SCRIPTS -->
     <script src="/js/custom.js"></script>     
+
+    <!-- JavaScript để hiển thị hộp thoại xác nhận -->
+    <script type="text/javascript">
+        function confirmDelete() {
+            return confirm("Bạn có chắc chắn muốn xóa không?");
+        }
+    </script>
 </body>
 </html>
