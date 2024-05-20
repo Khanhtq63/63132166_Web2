@@ -29,5 +29,7 @@ public class DiemThiContronller {
         model.addAttribute("currentPage", page);
         return "diemthi";
     }
+	
+	
 
 }

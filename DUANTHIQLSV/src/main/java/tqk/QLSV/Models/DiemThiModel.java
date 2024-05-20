@@ -70,6 +70,11 @@ public class DiemThiModel {
     public void setDiemCuoiKy(float diemCuoiKy) {
         this.diemCuoiKy = diemCuoiKy;
     }
+    
+    // Phương thức tính điểm trung bình cả kỳ
+    public float getDiemTrungBinh() {
+        return (diemQuaTrinh * 0.25f + diemGiuaKy * 0.25f + diemCuoiKy * 0.5f);
+    }
 
     @Override
     public String toString() {

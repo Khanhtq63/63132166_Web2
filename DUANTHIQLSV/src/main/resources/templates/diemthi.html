@@ -78,6 +78,7 @@
                             <th>Điểm quá trình</th>
                             <th>Điểm giữa kỳ</th>
                             <th>Điểm cuối kỳ</th>
+                            <th>Điểm trung bình</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -88,6 +89,7 @@
                             <td th:text="${dt.diemQuaTrinh}"></td>
                             <td th:text="${dt.diemGiuaKy}"></td>
                             <td th:text="${dt.diemCuoiKy}"></td>
+                             <td th:text="${dt.diemTrungBinh}"></td>
                             <td>
                                 <a  class ="btn btn-primary">Cập nhật</a>
                                 <a  class ="btn btn-danger" onclick="return confirmDelete()">Xóa</a>
