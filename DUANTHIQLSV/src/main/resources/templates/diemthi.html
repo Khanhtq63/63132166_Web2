@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCORE MANAGEMENT</title>
+    <!-- BOOTSTRAP STYLES-->
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLES-->
+    <link href="/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Admin</a> 
+            </div>
+            <div style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;"> Last access : 23 April 2024 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+        </nav>   
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li class="text-center">   
+                        <img src="/img/find_user.png" class="user-image img-responsive"/>
+                    </li>							
+                    <li>
+                        <a  href="/"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a  href="/SinhVien/all"><i class="fa fa-desktop fa-3x"></i> Sinh viên</a>
+                    </li>
+                    <li>
+                        <a  href="tab-panel.html"><i class="fa fa-qrcode fa-3x"></i> Lớp học</a>
+                    </li>
+                    <li  >
+                        <a  href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i> Khóa học</a>
+                    </li>	
+                    <li  >
+                        <a  href="table.html"><i class="fa fa-table fa-3x"></i>Môn học</a>
+                    </li>
+                    <li  >
+                        <a  href="/DiemThi/all"><i class="fa fa-edit fa-3x"></i> Điểm số </a>
+                    </li>				
+                </ul>
+            </div>
+        </nav>  
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">                      
+                <h1>Danh sách Sinh Viên</h1>
+                
+                <!-- Form tìm kiếm sinh viên -->
+                <form action="/SinhVien/search" method="get" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" name="hoTen" class="form-control" placeholder="Nhập tên sinh viên">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+                </form>
+                
+                <a href="/SinhVien/addsv" type="submit" class="btn btn-primary">SỬA ĐIỂM</a>
+                <!-- Danh sách Sinh Viên Table -->
+                <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Mã môn học</th>
+                            <th>Mã SV</th>
+                            <th>Điểm quá trình</th>
+                            <th>Điểm giữa kỳ</th>
+                            <th>Điểm cuối kỳ</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="dt : ${DSDiemThi}"> 
+                            <td th:text="${dt.maMonHoc}"></td>
+                            <td th:text="${dt.maSinhVien}"></td>
+                            <td th:text="${dt.diemQuaTrinh}"></td>
+                            <td th:text="${dt.diemGiuaKy}"></td>
+                            <td th:text="${dt.diemCuoiKy}"></td>
+                            <td>
+                                <a  class ="btn btn-primary">Cập nhật</a>
+                                <a  class ="btn btn-danger" onclick="return confirmDelete()">Xóa</a>
+                                <a  class ="btn btn-info">Xem</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Pagination -->
+                <div>
+                    <ul class="pagination">
+                        <li th:classappend="${currentPage == 0} ? 'disabled'">
+                            <a th:href="@{/DiemThi/all(page=${currentPage - 1})}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li th:each="i : ${#numbers.sequence(0, totalPages - 1)}"
+                            th:classappend="${i == currentPage} ? 'active'">
+                            <a th:href="@{/DiemThi/all(page=${i})}" th:text="${i + 1}">1</a>
+                        </li>
+                        <li th:classappend="${currentPage + 1 == totalPages} ? 'disabled'">
+                            <a th:href="@{/DiemThi/all(page=${currentPage + 1})}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="/js/jquery.metisMenu.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="/js/custom.js"></script>     
+    <!-- JavaScript để hiển thị hộp thoại xác nhận -->
+    <script src="/js/function.js"></script>
+</body>
+</html>

@@ -28,10 +28,6 @@ public class AdminController {
 	public String MonHoc() {
 		return "MonHoc.html";
 	}
-	@GetMapping("/diem")
-	public String Diem() {
-		return "Diem.html";
-	}
 	
 }
 
