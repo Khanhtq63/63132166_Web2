@@ -56,7 +56,12 @@ public class SinhVienServiceImp implements SinhVienService {
 
 	@Override
 	public Page<SinhVienModel> getSinhVienPage(Pageable pageable) {
-		return sinhVienRepository.findAll(pageable);
+		Page<SinhVienModel> page = sinhVienRepository.findAll(pageable);
+	    if (page == null) {
+	        // Trường hợp không tìm thấy dữ liệu, trả về một trang rỗng
+	        return Page.empty(pageable);
+	    }
+	    return page;
 	}
 	
 	

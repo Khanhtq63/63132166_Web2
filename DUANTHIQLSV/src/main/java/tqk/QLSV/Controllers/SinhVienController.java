@@ -34,6 +34,7 @@ public class SinhVienController {
         return "sinhvien";
     }
 
+
     @GetMapping("/addsv")
     public String createSinhVienForm(Model model) {
         model.addAttribute("DSSinhVien", new SinhVienModel());
