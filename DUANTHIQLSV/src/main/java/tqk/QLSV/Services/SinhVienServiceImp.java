@@ -64,5 +64,18 @@ public class SinhVienServiceImp implements SinhVienService {
 	    return page;
 	}
 	
-	
+	@Override
+	public List<SinhVienModel> SearchSinhVienByMaSV(String maSinhVien) {
+	    return sinhVienRepository.findByMaSinhVienContainingIgnoreCase(maSinhVien);
+	}
+
+	@Override
+	public List<SinhVienModel> SearchSinhVienByGioiTinh(String gioiTinh) {
+	    return sinhVienRepository.findByGioiTinhContainingIgnoreCase(gioiTinh);
+	}
+
+	@Override
+	public List<SinhVienModel> SearchSinhVienByMaLop(String maLop) {
+	    return sinhVienRepository.findByMaLopContainingIgnoreCase(maLop);
+	}
 }

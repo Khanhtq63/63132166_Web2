@@ -16,18 +16,6 @@ public class AdminController {
 	public String TrangChu() {
 		return "index.html";
 	}
-	@GetMapping("/khoahoc")
-	public String KhoaHoc() {
-		return "KhoaHoc.html";
-	}
-	@GetMapping("/lop")
-	public String Lop() {
-		return "Lop.html";
-	}
-	@GetMapping("/monhoc")
-	public String MonHoc() {
-		return "MonHoc.html";
-	}
 	
 }
 

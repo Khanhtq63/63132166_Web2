@@ -30,28 +30,29 @@
         <!-- /. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-                    <li class="text-center">   
-                        <img src="/img/find_user.png" class="user-image img-responsive"/>
-                    </li>							
+              <ul class="nav" id="main-menu">
+				<li class="text-center">
+                    <img src="/img/find_user.png" class="user-image img-responsive"/>
+					</li>							
                     <li>
                         <a  href="/"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
                     </li>
-                    <li>
-                        <a  href="/SinhVien/all"><i class="fa fa-desktop fa-3x"></i> Sinh viên</a>
+                      <li>
+                        <a  href="/SinhVien/all"><i class="fa fa-user fa-3x"></i> Sinh viên</a>
                     </li>
                     <li>
-                        <a  href="tab-panel.html"><i class="fa fa-qrcode fa-3x"></i> Lớp học</a>
+                        <a  href="/LopHoc/all"><i class="fa fa-users fa-3x"></i> Lớp học</a>
                     </li>
-                    <li  >
-                        <a  href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i> Khóa học</a>
+						   <li  >
+                        <a  href="/Khoa/all"><i class="fa fa-file-text fa-3x"></i> Khoa</a>
                     </li>	
-                    <li  >
-                        <a  href="table.html"><i class="fa fa-table fa-3x"></i>Môn học</a>
+                      <li  >
+                        <a  href="/MonHoc/all"><i class="fa fa-table fa-3x"></i>Môn học</a>
                     </li>
                     <li  >
                         <a  href="/DiemThi/all"><i class="fa fa-edit fa-3x"></i> Điểm số </a>
                     </li>				
+		
                 </ul>
             </div>
         </nav>  
@@ -63,7 +64,16 @@
                 <!-- Form tìm kiếm sinh viên -->
                 <form action="/SinhVien/search" method="get" class="form-inline">
                     <div class="form-group">
-                        <input type="text" name="hoTen" class="form-control" placeholder="Nhập tên sinh viên">
+                        <label for="searchType">Tìm kiếm theo:</label>
+                        <select name="searchType" id="searchType" class="form-control" onchange="changeSearchInput()">
+                            <option value="hoTen">Tên Sinh Viên</option>
+                            <option value="maSinhVien">Mã SV</option>
+                            <option value="gioiTinh">Giới Tính</option>
+                            <option value="maLop">Mã Lớp</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="searchValueDiv">
+                        <input type="text" name="searchValue" class="form-control" placeholder="Nhập giá trị tìm kiếm">
                     </div>
                     <button type="submit" class="btn btn-primary">Tìm kiếm</button>
                 </form>
@@ -102,23 +112,22 @@
                 <!-- Pagination -->
                 <div>
                    <ul class="pagination">
-    <li th:classappend="${currentPage == 0} ? 'disabled'">
-        <a th:href="@{/SinhVien/all(page=${currentPage == null ? 0 : currentPage - 1})}" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-        </a>
-    </li>
-    <li th:each="i : ${#numbers.sequence(0, totalPages == null ? 0 : totalPages - 1)}"
-        th:classappend="${i == (currentPage == null ? 0 : currentPage)} ? 'active'">
-        <a th:href="@{/SinhVien/all(page=${i})}" th:text="${i + 1}">1</a>
-    </li>
-    <li th:classappend="${(currentPage == null ? 0 : currentPage) + 1 == (totalPages == null ? 0 : totalPages)} ? 'disabled'">
-        <a th:href="@{/SinhVien/all(page=${currentPage == null ? 0 : currentPage + 1})}" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-        </a>
-    </li>
-</ul>
+    				<li th:classappend="${currentPage == 0} ? 'disabled'">
+        				<a th:href="@{/SinhVien/all(page=${currentPage == null ? 0 : currentPage - 1})}" aria-label="Previous">
+            				<span aria-hidden="true">&laquo;</span>
+        				</a>
+    				</li>
+    				<li th:each="i : ${#numbers.sequence(0, totalPages == null ? 0 : totalPages - 1)}"
+       						 th:classappend="${i == (currentPage == null ? 0 : currentPage)} ? 'active'">
+        				<a th:href="@{/SinhVien/all(page=${i})}" th:text="${i + 1}">1</a>
+    				</li>
+    				<li th:classappend="${(currentPage == null ? 0 : currentPage) + 1 == (totalPages == null ? 0 : totalPages)} ? 'disabled'">
+        				<a th:href="@{/SinhVien/all(page=${currentPage == null ? 0 : currentPage + 1})}" aria-label="Next">
+            					<span aria-hidden="true">&raquo;</span>
+        				</a>
+    				</li>
+					</ul>
                 </div>
-
             </div>
             <!-- /. PAGE INNER  -->
         </div>

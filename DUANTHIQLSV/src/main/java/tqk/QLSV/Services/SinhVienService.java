@@ -23,5 +23,11 @@ public interface SinhVienService {
 	
 	Page<SinhVienModel> getSinhVienPage(Pageable pageable);
 	
+	List<SinhVienModel> SearchSinhVienByMaSV(String maSinhVien);
+
+	List<SinhVienModel> SearchSinhVienByGioiTinh(String gioiTinh);
+
+	List<SinhVienModel> SearchSinhVienByMaLop(String maLop);
+	
 
 }

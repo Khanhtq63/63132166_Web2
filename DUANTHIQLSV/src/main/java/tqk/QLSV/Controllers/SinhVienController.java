@@ -67,8 +67,22 @@ public class SinhVienController {
     }
     
     @GetMapping("/search")
-    public String searchSinhVien(@RequestParam("hoTen") String tenSinhVien, Model model) {
-        List<SinhVienModel> dssvList = sinhVienService.SearchSinhVienByName(tenSinhVien);
+    public String searchSinhVien(@RequestParam("searchType") String searchType, @RequestParam("searchValue") String searchValue, Model model) {
+        List<SinhVienModel> dssvList;
+        switch (searchType) {
+            case "maSinhVien":
+                dssvList = sinhVienService.SearchSinhVienByMaSV(searchValue);
+                break;
+            case "gioiTinh":
+                dssvList = sinhVienService.SearchSinhVienByGioiTinh(searchValue);
+                break;
+            case "maLop":
+                dssvList = sinhVienService.SearchSinhVienByMaLop(searchValue);
+                break;
+            default:
+                dssvList = sinhVienService.SearchSinhVienByName(searchValue);
+                break;
+        }
         model.addAttribute("DSSinhVien", dssvList);
         return "sinhvien";
     }

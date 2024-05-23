@@ -14,5 +14,11 @@ public interface SinhVienRepository extends JpaRepository<SinhVienModel, String>
 	 List<SinhVienModel> findByHoTenContainingIgnoreCase(String hoTen);
 	 
 	 Page<SinhVienModel> findAll(Pageable pageable);
+	 
+	 List<SinhVienModel> findByMaSinhVienContainingIgnoreCase(String maSinhVien);
+
+	 List<SinhVienModel> findByGioiTinhContainingIgnoreCase(String gioiTinh);
+
+	 List<SinhVienModel> findByMaLopContainingIgnoreCase(String maLop);
 
 }
