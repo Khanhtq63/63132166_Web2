@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SCORE MANAGEMENT</title>
+    <title>STUDENT MANAGEMENT</title>
     <!-- BOOTSTRAP STYLES-->
     <link href="/css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
@@ -30,7 +30,7 @@
         <!-- /. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
-               <ul class="nav" id="main-menu">
+              <ul class="nav" id="main-menu">
 				<li class="text-center">
                     <img src="/img/find_user.png" class="user-image img-responsive"/>
 					</li>							
@@ -59,73 +59,36 @@
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">                      
-                <h1>Danh sách Điểm</h1>
-                
-                
-                <form action="/SinhVien/search" method="get" class="form-inline">
-                    <div class="form-group">
-                        <label for="searchType">Tìm kiếm theo:</label>
-                        <select name="searchType" id="searchType" class="form-control" onchange="changeSearchInput()">
-                            <option value="maSinhVien">Mã SV</option>
-                        </select>
-                    </div>
-                    <div class="form-group" id="searchValueDiv">
-                        <input type="text" name="searchValue" class="form-control" placeholder="Nhập giá trị tìm kiếm">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Tìm kiếm</button>
-                </form>
-                
-                <a href="/SinhVien/addsv" type="submit" class="btn btn-primary">SỬA ĐIỂM</a>
-                <!-- Danh sách Sinh Viên Table -->
-                <table class="table table-striped table-bordered table-hover">
+               <h1>Danh sách điểm thi</h1>
+                <a href="/DiemThi/adddt" class="btn btn-primary">Thêm điểm thi</a>
+                <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
                             <th>Mã môn học</th>
-                            <th>Mã SV</th>
+                            <th>Mã sinh viên</th>
                             <th>Điểm quá trình</th>
                             <th>Điểm giữa kỳ</th>
                             <th>Điểm cuối kỳ</th>
                             <th>Điểm trung bình</th>
-                            <th>Actions</th>
+                            <th>Thao tác</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr th:each="dt : ${DSDiemThi}"> 
-                            <td th:text="${dt.maMonHoc}"></td>
-                            <td th:text="${dt.maSinhVien}"></td>
-                            <td th:text="${dt.diemQuaTrinh}"></td>
-                            <td th:text="${dt.diemGiuaKy}"></td>
-                            <td th:text="${dt.diemCuoiKy}"></td>
-                             <td th:text="${dt.diemTrungBinh}"></td>
+                        <tr th:each="dt : ${DSDiemThi}">
+                            <td th:text="${dt?.maMonHoc}"></td>
+       						 <td th:text="${dt?.maSinhVien}"></td>
+        					 <td th:text="${dt?.diemQuaTrinh}"></td>
+        					 <td th:text="${dt?.diemGiuaKy}"></td>
+        					 <td th:text="${dt?.diemCuoiKy}"></td>
+        					 <td th:text="${dt?.diemTrungBinh}"></td>
                             <td>
-                                <a  class ="btn btn-primary">Cập nhật</a>
-                                <a  class ="btn btn-danger" onclick="return confirmDelete()">Xóa</a>
-                                <a  class ="btn btn-info">Xem</a>
+                                <a th:if="${dt != null}" th:href="@{/DiemThi/edit/{maMonHoc}/{maSinhVien}(maMonHoc=${dt.maMonHoc}, maSinhVien=${dt.maSinhVien})}" class="btn btn-primary">Cập nhật</a>
+                                <a th:if="${dt != null}" th:href="@{/DiemThi/delete/{maMonHoc}/{maSinhVien}(maMonHoc=${dt.maMonHoc}, maSinhVien=${dt.maSinhVien})}" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa điểm thi này?');">Xóa</a>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-
-                <!-- Pagination -->
-                <div>
-                    <ul class="pagination">
-                        <li th:classappend="${currentPage == 0} ? 'disabled'">
-                            <a th:href="@{/DiemThi/all(page=${currentPage - 1})}" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li th:each="i : ${#numbers.sequence(0, totalPages - 1)}"
-                            th:classappend="${i == currentPage} ? 'active'">
-                            <a th:href="@{/DiemThi/all(page=${i})}" th:text="${i + 1}">1</a>
-                        </li>
-                        <li th:classappend="${currentPage + 1 == totalPages} ? 'disabled'">
-                            <a th:href="@{/DiemThi/all(page=${currentPage + 1})}" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
+              
             </div>
             <!-- /. PAGE INNER  -->
         </div>
@@ -145,3 +108,5 @@
     <script src="/js/function.js"></script>
 </body>
 </html>
+
+

@@ -2,14 +2,13 @@ package tqk.QLSV.Services;
 
 import java.util.List;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-
+import Serializable.DiemThiId;
 import tqk.QLSV.Models.DiemThiModel;
 
 public interface DiemThiService {
-	
-	public List<DiemThiModel> getAllDiemThi();
-	
-	Page<DiemThiModel> getDiemThiPage(Pageable pageable);
+    List<DiemThiModel> getAllDiemThi();
+    DiemThiModel saveDiemThi(DiemThiModel diemThi);
+    DiemThiModel getDiemThiByID(DiemThiId id);
+    DiemThiModel updateDiemThi(DiemThiModel diemThi);
+    void deleteDiemThiByID(DiemThiId id);
 }
