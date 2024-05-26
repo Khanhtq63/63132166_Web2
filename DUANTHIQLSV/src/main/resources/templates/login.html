@@ -1,53 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="/css/styles.css" />
     <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .login-container {
-            margin-top: 10%;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        .login-title {
-            margin-bottom: 30px;
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-        }
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+p {
+    text-align: center;
+}
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="login-container">
-                    <div class="login-title">Login</div>
-                    <form>
-                        <div class="form-group">
-                            <label for="email">Email address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter email">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Password">
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Login</button>
-                    </form>
-                    <p class="mt-3 text-center">Don't have an account? <a href="register.html">Register</a></p>
-                </div>
-            </div>
+    <h2>Đăng nhập</h2>
+    
+    <form th:action="@{/login}" th:object="${user}" method="post">
+        <div>
+            <label for="username">Tên người dùng:</label>
+            <input type="text" id="username" th:field="*{username}" required />
         </div>
+        <div>
+            <label for="password">Mật khẩu:</label>
+            <input type="password" id="password" th:field="*{password}" required />
+        </div>
+        <div>
+            <button type="submit">Đăng nhập</button>
+        </div>
+    </form>
+    
+    <div th:if="${errorMessage}">
+        <p style="color:red;" th:text="${errorMessage}"></p>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <div th:if="${successMessage}">
+        <p style="color:green;" th:text="${successMessage}"></p>
+    </div>
 </body>
 </html>
