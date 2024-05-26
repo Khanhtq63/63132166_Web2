@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="tqk.QLBH.repositories.KhachHangRepository"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="tqk.QLBH.Models.KhachHang"/>
     <fullyQualifiedTypeName name="tqk.QLBH.services.KhachHangService"/>
@@ -19,7 +18,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
     <fullyQualifiedTypeName name="org.hibernate.type.descriptor.jdbc.VarcharJdbcType"/>
-    <fullyQualifiedTypeName name="java.lang.Float"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="tqk.QLSV.Repositories.DiemThiRepository"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
     <fullyQualifiedTypeName name="Serializable.DiemThiId"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.Float"/>
 </qualifiedTypeNameHistroy>

@@ -34,9 +34,9 @@
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                <ul class="nav" id="main-menu">
-				<li class="text-center">
+                <li class="text-center">
                     <img src="/img/find_user.png" class="user-image img-responsive"/>
-					</li>							
+                    </li>                            
                     <li>
                         <a  href="/"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
                     </li>
@@ -46,16 +46,16 @@
                     <li>
                         <a  href="/LopHoc/all"><i class="fa fa-users fa-3x"></i> Lớp học</a>
                     </li>
-						   <li  >
+                           <li  >
                         <a  href="/Khoa/all"><i class="fa fa-file-text fa-3x"></i> Khoa</a>
-                    </li>	
+                    </li>    
                       <li  >
                         <a  href="/MonHoc/all"><i class="fa fa-table fa-3x"></i>Môn học</a>
                     </li>
                     <li  >
                         <a  href="/DiemThi/all"><i class="fa fa-edit fa-3x"></i> Điểm số </a>
-                    </li>				
-		
+                    </li>                
+        
                 </ul>
             </div>
         </nav>  
@@ -64,36 +64,36 @@
             <div id="page-inner">                      
                 <h1>Danh sách Sinh Viên</h1>
               <!-- Add Sinh Viên Form -->
-				<form th:action="@{/SinhVien/sav}" th:object="${DSSinhVien}" method="post">
-    				<div class="form-group">
-        				<label for="maSinhVien">Mã SV:</label>
-        				<input type="text" class="form-control" th:field="*{maSinhVien}" name="maSinhVien">
-    				</div>
-    				<div class="form-group">
-        				<label for="hoTen">Tên SV:</label>
-       					<input type="text" class="form-control" th:field="*{hoTen}" name="hoTen">
-    				</div>
-    				<div class="form-group">
-       					<label for="ngaySinh">Ngày sinh:</label>
-        				<input type="date" class="form-control" th:field="*{ngaySinh}" name="ngaySinh">
-    				</div>
-    				<div class="form-group">
-        				<label for="gioiTinh">Giới tính:</label>
-        				<select class="form-control" th:field="*{gioiTinh}" name="gioiTinh">
-            				<option value="Nam">Nam</option>
-            				<option value="Nữ">Nữ</option>
-        				</select>
-    				</div>
-    				<div class="form-group">
-        					<label for="noiSinh">Nơi sinh:</label>
-        					<input type="text" class="form-control" th:field="*{noiSinh}" name="noiSinh">
-    				</div>
-    				<div class="form-group">
-        					<label for="maLop">Mã lớp:</label>
-        					<input type="text" class="form-control" th:field="*{maLop}" name="maLop">
-    				</div>
-    					<button type="submit" class="btn btn-primary">Thêm Sinh Viên</button>
-				</form>
+                <form th:action="@{/SinhVien/sav}" th:object="${DSSinhVien}" method="post">
+                    <div class="form-group">
+                        <label for="maSinhVien">Mã SV:</label>
+                        <input type="text" class="form-control" th:field="*{maSinhVien}" name="maSinhVien" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hoTen">Tên SV:</label>
+                        <input type="text" class="form-control" th:field="*{hoTen}" name="hoTen">
+                    </div>
+                    <div class="form-group">
+                        <label for="ngaySinh">Ngày sinh:</label>
+                        <input type="date" class="form-control" th:field="*{ngaySinh}" name="ngaySinh">
+                    </div>
+                    <div class="form-group">
+                        <label for="gioiTinh">Giới tính:</label>
+                        <select class="form-control" th:field="*{gioiTinh}" name="gioiTinh">
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                            <label for="noiSinh">Nơi sinh:</label>
+                            <input type="text" class="form-control" th:field="*{noiSinh}" name="noiSinh">
+                    </div>
+                    <div class="form-group">
+                            <label for="maLop">Mã lớp:</label>
+                            <input type="text" class="form-control" th:field="*{maLop}" name="maLop" required>
+                    </div>
+                        <button type="submit" class="btn btn-primary">Thêm Sinh Viên</button>
+                </form>
             </div>
             <!-- /. PAGE INNER  -->
         </div>

@@ -27,7 +27,7 @@ public class DiemThiModel {
     private float diemGiuaKy;
 
     @Column(name="DIEMCUOIKY")
-    private float diemCuoiKy;
+    private Float diemCuoiKy;
 
     // Getters and setters
 
@@ -63,11 +63,11 @@ public class DiemThiModel {
         this.diemGiuaKy = diemGiuaKy;
     }
 
-    public float getDiemCuoiKy() {
+    public Float getDiemCuoiKy() {
         return diemCuoiKy;
     }
 
-    public void setDiemCuoiKy(float diemCuoiKy) {
+    public void setDiemCuoiKy(Float diemCuoiKy) {
         this.diemCuoiKy = diemCuoiKy;
     }
     
