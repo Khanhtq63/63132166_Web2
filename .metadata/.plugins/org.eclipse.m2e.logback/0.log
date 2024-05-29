@@ -9987,3 +9987,5 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact net.minidev:j
 2024-05-26 20:37:52,996 [Worker-30: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.15/commons-codec-1.15-javadoc.jar
 2024-05-26 20:39:45,505 [Worker-30: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.15/commons-codec-1.15-javadoc.jar
 2024-05-26 20:39:45,510 [Worker-30: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for commons-codec:commons-codec:1.15
+2024-05-26 21:27:44,477 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@61bf851c{STOPPING}[12.0.3,sto=0]
+2024-05-26 21:27:44,482 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@649964eb{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
