@@ -6,6 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import tqk.QLSV.Models.DiemThiModel;
 import tqk.QLSV.Services.DiemThiService;
+import tqk.QLSV.Services.MonHocService;
+import tqk.QLSV.Services.SinhVienService;
 import Serializable.DiemThiId;
 
 @Controller
@@ -14,6 +16,12 @@ public class DiemThiController {
 
     @Autowired
     private DiemThiService diemThiService;
+    
+    @Autowired
+    private SinhVienService sinhVienService;
+    
+    @Autowired
+    private MonHocService monHocService;
 
     @GetMapping("/all")
     public String getAllDiemThi(Model model) {
@@ -24,6 +32,7 @@ public class DiemThiController {
     @GetMapping("/adddt")
     public String createDiemThiForm(Model model) {
         model.addAttribute("diemThi", new DiemThiModel());
+        model.addAttribute("DSMonHoc", monHocService.getAllMonHoc());
         return "adddt";
     }
 
