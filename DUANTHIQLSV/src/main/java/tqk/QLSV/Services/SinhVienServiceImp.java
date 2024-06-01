@@ -1,13 +1,7 @@
 package tqk.QLSV.Services;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.sql.Blob;
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -84,7 +78,6 @@ public class SinhVienServiceImp implements SinhVienService {
 	public Page<SinhVienModel> SearchSinhVienByMaLop(String maLop, Pageable pageable) {
 	    return sinhVienRepository.findByMaLopContainingIgnoreCase(maLop, pageable);
 	}
-
 	
 	
 }

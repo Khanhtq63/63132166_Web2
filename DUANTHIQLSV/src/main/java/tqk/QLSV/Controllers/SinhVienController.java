@@ -49,9 +49,20 @@ public class SinhVienController {
     }
 
     @PostMapping("/sav")
-    public String saveSinhVien(@ModelAttribute("DSSinhVien") SinhVienModel sinhVien) {
-        sinhVienService.SaveSinhVien(sinhVien);
-        return "redirect:/SinhVien/all";
+    public String saveSinhVien(@ModelAttribute("DSSinhVien") SinhVienModel sinhVien, Model model) {
+        // Kiểm tra xem mã số sinh viên đã tồn tại chưa
+        SinhVienModel existingSinhVien = sinhVienService.getSinhVienByID(sinhVien.getMaSinhVien());
+        if (existingSinhVien != null) {
+            // Nếu mã số sinh viên đã tồn tại, thông báo cho người dùng
+            model.addAttribute("error", "Mã số sinh viên đã tồn tại!");
+            model.addAttribute("DSSinhVien", sinhVien); // Trả về lại thông tin sinh viên để hiển thị trên form
+            model.addAttribute("DSLopHoc", lopHocService.getAllLopHoc());
+            return "addsv"; // Trả về trang cập nhật sinh viên với thông báo lỗi
+        } else {
+            // Nếu mã số sinh viên chưa tồn tại, thêm sinh viên vào cơ sở dữ liệu
+            sinhVienService.SaveSinhVien(sinhVien);
+            return "redirect:/SinhVien/all";
+        }
     }
     
     @GetMapping("/edit/{maSinhVien}")

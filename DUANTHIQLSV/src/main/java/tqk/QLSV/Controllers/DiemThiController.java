@@ -1,5 +1,8 @@
 package tqk.QLSV.Controllers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -77,7 +80,21 @@ public class DiemThiController {
                                  @RequestParam(name = "maMonHoc", required = false) String maMonHoc,
                                  @RequestParam(name = "maSinhVien", required = false) String maSinhVien) {
         Pageable pageable = PageRequest.of(page, 10); // Số lượng item trên mỗi trang là 10, bạn có thể thay đổi tùy ý
-        if (maMonHoc != null && !maMonHoc.isEmpty()) {
+        
+        if (maMonHoc != null && !maMonHoc.isEmpty() && maSinhVien != null && !maSinhVien.isEmpty()) {
+            // Nếu cả hai mã đều được nhập, sử dụng phương thức getDiemThiByID để chỉ tìm ra một bản ghi duy nhất
+            DiemThiId id = new DiemThiId(maMonHoc, maSinhVien);
+            DiemThiModel diemThi = diemThiService.getDiemThiByID(id);
+            
+            if (diemThi != null) {
+                List<DiemThiModel> result = new ArrayList<>();
+                result.add(diemThi);
+                model.addAttribute("DSDiemThi", result);
+            } else {
+                // Nếu không tìm thấy, trả về trang không có dữ liệu
+                model.addAttribute("DSDiemThi", new ArrayList<DiemThiModel>());
+            }
+        } else if (maMonHoc != null && !maMonHoc.isEmpty()) {
             model.addAttribute("DSDiemThi", diemThiService.findByMaMonHocContaining(maMonHoc, pageable));
         } else if (maSinhVien != null && !maSinhVien.isEmpty()) {
             model.addAttribute("DSDiemThi", diemThiService.findByMaSinhVienContaining(maSinhVien, pageable));

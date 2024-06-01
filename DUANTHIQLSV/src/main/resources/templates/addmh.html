@@ -55,6 +55,9 @@
         <div id="page-wrapper">
             <div id="page-inner">
                 <h1>Thêm Môn Học</h1>
+                 <div th:if="${error}" class="alert alert-danger">
+                    <strong>Thông báo:</strong> <span th:text="${error}"></span>
+                </div>
                 <form th:action="@{/MonHoc/save}" th:object="${DSMonHoc}" method="post">
                     <div class="form-group">
                         <label for="maMonHoc">Mã Môn Học</label>

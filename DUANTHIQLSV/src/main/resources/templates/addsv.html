@@ -63,7 +63,10 @@
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">                      
-                <h1>Danh sách Sinh Viên</h1>
+                <h1>Thêm Sinh Viên</h1>
+                <div th:if="${error}" class="alert alert-danger">
+        <strong>Thông báo:</strong> <span th:text="${error}"></span>
+    </div>
               <!-- Add Sinh Viên Form -->
                 <form th:action="@{/SinhVien/sav}" th:object="${DSSinhVien}" method="post" enctype="multipart/form-data">
                     <div class="form-group">

@@ -55,6 +55,9 @@
         <div id="page-wrapper">
             <div id="page-inner">
                 <h1>Thêm Khoa</h1>
+                 <div th:if="${error}" class="alert alert-danger">
+                    <strong>Thông báo:</strong> <span th:text="${error}"></span>
+                </div>
                 <form th:action="@{/Khoa/save}" th:object="${DSKhoa}" method="post">
                     <div class="form-group">
                         <label for="maKhoa">Mã Khoa</label>

@@ -35,9 +35,18 @@ public class MonHocController {
     }
 
     @PostMapping("/save")
-    public String saveMonHoc(@ModelAttribute("DSMonHoc") MonHocModel monHoc) {
-        monHocService.saveMonHoc(monHoc);
-        return "redirect:/MonHoc/all";
+    public String saveMonHoc(@ModelAttribute("DSMonHoc") MonHocModel monHoc, Model model) {
+        // Kiểm tra xem mã số môn học đã tồn tại chưa
+        MonHocModel existingMonHoc = monHocService.getMonHocByID(monHoc.getMaMonHoc());
+        if (existingMonHoc != null) {
+            // Nếu mã số môn học đã tồn tại, thông báo cho người dùng
+            model.addAttribute("error", "Mã môn học đã tồn tại!");
+            return "addmh"; // Trả về trang thêm môn học với thông báo lỗi
+        } else {
+            // Nếu mã số môn học chưa tồn tại, lưu môn học vào cơ sở dữ liệu
+            monHocService.saveMonHoc(monHoc);
+            return "redirect:/MonHoc/all";
+        }
     }
 
     @GetMapping("/edit/{maMonHoc}")

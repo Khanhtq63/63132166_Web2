@@ -42,9 +42,18 @@ public class LopHocController {
     }
 
     @PostMapping("/save")
-    public String saveLopHoc(@ModelAttribute("DSLopHoc") LopHocModel lopHoc) {
-        lopHocService.saveLopHoc(lopHoc);
-        return "redirect:/LopHoc/all";
+    public String saveLopHoc(@ModelAttribute("DSLopHoc") LopHocModel lopHoc, Model model) {
+        // Kiểm tra xem mã số lớp học đã tồn tại chưa
+        LopHocModel existingLopHoc = lopHocService.getLopHocByID(lopHoc.getMaLop());
+        if (existingLopHoc != null) {
+            // Nếu mã số lớp học đã tồn tại, thông báo cho người dùng
+            model.addAttribute("error", "Mã lớp học đã tồn tại!");
+            return "addlh"; // Trả về trang thêm lớp học với thông báo lỗi
+        } else {
+            // Nếu mã số lớp học chưa tồn tại, lưu lớp học vào cơ sở dữ liệu
+            lopHocService.saveLopHoc(lopHoc);
+            return "redirect:/LopHoc/all";
+        }
     }
 
     @GetMapping("/edit/{maLop}")

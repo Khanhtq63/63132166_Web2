@@ -60,13 +60,13 @@
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">                      
-               <h1>Danh sách điểm thi</h1>
+               <h1>Danh sách điểm số</h1>
                <form th:action="@{/DiemThi/search}" method="GET">
     <input type="text" name="maMonHoc" placeholder="Nhập mã môn học">
     <input type="text" name="maSinhVien" placeholder="Nhập mã sinh viên">
     <button type="submit" class="btn btn-primary">Tìm kiếm</button>
 </form>
-                <a href="/DiemThi/adddt" class="btn btn-primary">Thêm điểm thi</a>
+                <a href="/DiemThi/adddt" class="btn btn-primary">Thêm điểm</a>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>

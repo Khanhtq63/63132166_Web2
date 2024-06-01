@@ -54,6 +54,9 @@
         <div id="page-wrapper">
             <div id="page-inner">
                 <h1>Thêm lớp học</h1>
+                <div th:if="${error}" class="alert alert-danger">
+                    <strong>Thông báo:</strong> <span th:text="${error}"></span>
+                </div>
                 <form action="/LopHoc/save" method="post">
                     <div class="form-group">
                         <label for="maLop">Mã lớp</label>
