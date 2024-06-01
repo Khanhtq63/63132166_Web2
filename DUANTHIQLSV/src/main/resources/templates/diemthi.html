@@ -4,9 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>STUDENT MANAGEMENT</title>
+    <!-- BOOTSTRAP STYLES-->
     <link href="/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
     <link href="/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLES-->
     <link href="/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
 <body>
@@ -24,44 +28,50 @@
             <div style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;"> Last access : 23 April 2024 &nbsp; 
             <a href="/login" class="btn btn-danger square-btn-adjust">Đăng xuất</a> </div>
         </nav>   
+        <!-- /. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-                    <li class="text-center">
-                        <img src="/img/find_user.png" class="user-image img-responsive"/>
-                    </li>							
+              <ul class="nav" id="main-menu">
+				<li class="text-center">
+                    <img src="/img/find_user.png" class="user-image img-responsive"/>
+					</li>							
                     <li>
-                        <a href="/"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                        <a  href="/"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                    </li>
+                      <li>
+                        <a  href="/SinhVien/all"><i class="fa fa-user fa-3x"></i> Sinh viên</a>
                     </li>
                     <li>
-                        <a href="/SinhVien/all"><i class="fa fa-user fa-3x"></i> Sinh viên</a>
+                        <a  href="/LopHoc/all"><i class="fa fa-users fa-3x"></i> Lớp học</a>
                     </li>
-                    <li>
-                        <a href="/LopHoc/all"><i class="fa fa-users fa-3x"></i> Lớp học</a>
+						   <li  >
+                        <a  href="/Khoa/all"><i class="fa fa-file-text fa-3x"></i> Khoa</a>
+                    </li>	
+                      <li  >
+                        <a  href="/MonHoc/all"><i class="fa fa-table fa-3x"></i>Môn học</a>
                     </li>
-                    <li>
-                        <a href="/Khoa/all"><i class="fa fa-file-text fa-3x"></i> Khoa</a>
-                    </li>
-                    <li>
-                        <a href="/MonHoc/all"><i class="fa fa-table fa-3x"></i>Môn học</a>
-                    </li>
-                    <li>
-                        <a href="/DiemThi/all"><i class="fa fa-edit fa-3x"></i> Điểm số</a>
+                    <li  >
+                        <a  href="/DiemThi/all"><i class="fa fa-edit fa-3x"></i> Điểm số </a>
                     </li>				
+		
                 </ul>
             </div>
         </nav>  
-        <div id="page-wrapper">
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
             <div id="page-inner">                      
-                <h1>Danh sách điểm thi</h1>
+               <h1>Danh sách điểm thi</h1>
+               <form th:action="@{/DiemThi/search}" method="GET">
+    <input type="text" name="maMonHoc" placeholder="Nhập mã môn học">
+    <input type="text" name="maSinhVien" placeholder="Nhập mã sinh viên">
+    <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+</form>
                 <a href="/DiemThi/adddt" class="btn btn-primary">Thêm điểm thi</a>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
                             <th>Mã môn học</th>
-                            <th>Tên môn học</th>
                             <th>Mã sinh viên</th>
-                            <th>Tên sinh viên</th>
                             <th>Điểm quá trình</th>
                             <th>Điểm giữa kỳ</th>
                             <th>Điểm cuối kỳ</th>
@@ -71,27 +81,54 @@
                     </thead>
                     <tbody>
                         <tr th:each="dt : ${DSDiemThi}">
-                            <td th:text="${dt.diemThi.maMonHoc}"></td>
-                            <td th:text="${dt.tenMonHoc}"></td>
-                            <td th:text="${dt.diemThi.maSinhVien}"></td>
-                            <td th:text="${dt.tenSinhVien}"></td>
-                            <td th:text="${dt.diemThi.diemQuaTrinh}"></td>
-                            <td th:text="${dt.diemThi.diemGiuaKy}"></td>
-                            <td th:text="${dt.diemThi.diemCuoiKy}"></td>
-                            <td th:text="${dt.diemThi.diemTrungBinh}"></td>
+                            <td th:text="${dt?.maMonHoc}"></td>
+       						 <td th:text="${dt?.maSinhVien}"></td>
+        					 <td th:text="${dt?.diemQuaTrinh}"></td>
+        					 <td th:text="${dt?.diemGiuaKy}"></td>
+        					 <td th:text="${dt?.diemCuoiKy}"></td>
+        					 <td th:text="${dt?.diemTrungBinh}"></td>
                             <td>
-                                <a th:href="@{/DiemThi/edit/{maMonHoc}/{maSinhVien}(maMonHoc=${dt.diemThi.maMonHoc}, maSinhVien=${dt.diemThi.maSinhVien})}" class="btn btn-primary">Cập nhật</a>
-                                <a th:href="@{/DiemThi/delete/{maMonHoc}/{maSinhVien}(maMonHoc=${dt.diemThi.maMonHoc}, maSinhVien=${dt.diemThi.maSinhVien})}" class="btn btn-warning" onclick="return confirm('Bạn có chắc chắn muốn xóa điểm thi này?');">Xóa</a>
+                                <a th:if="${dt != null}" th:href="@{/DiemThi/edit/{maMonHoc}/{maSinhVien}(maMonHoc=${dt.maMonHoc}, maSinhVien=${dt.maSinhVien})}" class="btn btn-primary">Cập nhật</a>
+                                <a th:if="${dt != null}" th:href="@{/DiemThi/delete/{maMonHoc}/{maSinhVien}(maMonHoc=${dt.maMonHoc}, maSinhVien=${dt.maSinhVien})}" class="btn btn-warning" onclick="return confirm('Bạn có chắc chắn muốn xóa điểm thi này?');">Xóa</a>
                             </td>
                         </tr>
                     </tbody>
                 </table>
+               <!-- Pagination -->
+                <div>
+                   <ul class="pagination">
+    				<li th:classappend="${currentPage == 0} ? 'disabled'">
+        				<a th:href="@{/DiemThi/all(page=${currentPage == null ? 0 : currentPage - 1})}" aria-label="Previous">
+            				<span aria-hidden="true">&laquo;</span>
+        				</a>
+    				</li>
+    				<li th:each="i : ${#numbers.sequence(0, totalPages == null ? 0 : totalPages - 1)}"
+       						 th:classappend="${i == (currentPage == null ? 0 : currentPage)} ? 'active'">
+        				<a th:href="@{/DiemThi/all(page=${i})}" th:text="${i + 1}">1</a>
+    				</li>
+    				<li th:classappend="${(currentPage == null ? 0 : currentPage) + 1 == (totalPages == null ? 0 : totalPages)} ? 'disabled'">
+        				<a th:href="@{/DiemThi/all(page=${currentPage == null ? 0 : currentPage + 1})}" aria-label="Next">
+            					<span aria-hidden="true">&raquo;</span>
+        				</a>
+    				</li>
+					</ul>
+                </div>
             </div>
+            <!-- /. PAGE INNER  -->
         </div>
+        <!-- /. PAGE WRAPPER  -->
     </div>
+    <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
     <script src="/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
     <script src="/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
     <script src="/js/jquery.metisMenu.js"></script>
+    <!-- CUSTOM SCRIPTS -->
     <script src="/js/custom.js"></script>     
+    <!-- JavaScript để hiển thị hộp thoại xác nhận -->
+    <script src="/js/function.js"></script>
 </body>
 </html>

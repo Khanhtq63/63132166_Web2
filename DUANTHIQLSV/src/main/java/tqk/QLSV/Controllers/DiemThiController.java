@@ -1,14 +1,13 @@
 package tqk.QLSV.Controllers;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import java.util.ArrayList;
 import org.springframework.web.bind.annotation.*;
 import tqk.QLSV.Models.DiemThiModel;
-import tqk.QLSV.Models.DiemThiDisplayModel;
 import tqk.QLSV.Services.DiemThiService;
 import tqk.QLSV.Services.MonHocService;
 import tqk.QLSV.Services.SinhVienService;
@@ -28,19 +27,13 @@ public class DiemThiController {
     private MonHocService monHocService;
 
     @GetMapping("/all")
-    public String getAllDiemThi(Model model) {
-    	 List<DiemThiModel> diemThiList = diemThiService.getAllDiemThi();
-    	    List<DiemThiDisplayModel> displayList = new ArrayList<>();
-
-    	    for (DiemThiModel diemThi : diemThiList) {
-    	        String hoTen = sinhVienService.getSinhVienByID(diemThi.getMaSinhVien()).getHoTen();
-    	        String tenMonHoc = monHocService.getMonHocByID(diemThi.getMaMonHoc()).getTenMonHoc();
-    	        DiemThiDisplayModel displayModel = new DiemThiDisplayModel(diemThi, hoTen, tenMonHoc);
-    	        displayList.add(displayModel);
-    	    }
-
-    	    model.addAttribute("DSDiemThi", displayList);
-    	    return "diemthi";
+    public String getAllDiemThi(Model model,@RequestParam(defaultValue = "0") int page) {
+    	Pageable pageable = PageRequest.of(page, 5);
+    	Page<DiemThiModel> diemThiPage = diemThiService.getDiemThiPage(pageable);
+        model.addAttribute("DSDiemThi", diemThiService.getAllDiemThi());
+        model.addAttribute("totalPages", diemThiPage.getTotalPages());
+        model.addAttribute("currentPage", page);
+        return "diemthi";
     }
 
     @GetMapping("/adddt")
@@ -65,11 +58,33 @@ public class DiemThiController {
         model.addAttribute("DSSinhVien", sinhVienService.getAllSinhVien());
         return "updatedt";
     }
+    
+    @PostMapping("/updatedt")
+    public String updateDiemThi(@ModelAttribute("diemThi") DiemThiModel diemThi) {
+        diemThiService.updateDiemThi(diemThi);
+        return "redirect:/DiemThi/all";
+    }
 
     @GetMapping("/delete/{maMonHoc}/{maSinhVien}")
     public String deleteDiemThi(@PathVariable String maMonHoc, @PathVariable String maSinhVien) {
         DiemThiId id = new DiemThiId(maMonHoc, maSinhVien);
         diemThiService.deleteDiemThiByID(id);
         return "redirect:/DiemThi/all";
+    }
+    
+    @GetMapping("/search")
+    public String searchDiemThi(Model model, @RequestParam(defaultValue = "0") int page,
+                                 @RequestParam(name = "maMonHoc", required = false) String maMonHoc,
+                                 @RequestParam(name = "maSinhVien", required = false) String maSinhVien) {
+        Pageable pageable = PageRequest.of(page, 10); // Số lượng item trên mỗi trang là 10, bạn có thể thay đổi tùy ý
+        if (maMonHoc != null && !maMonHoc.isEmpty()) {
+            model.addAttribute("DSDiemThi", diemThiService.findByMaMonHocContaining(maMonHoc, pageable));
+        } else if (maSinhVien != null && !maSinhVien.isEmpty()) {
+            model.addAttribute("DSDiemThi", diemThiService.findByMaSinhVienContaining(maSinhVien, pageable));
+        } else {
+            // Nếu không có tiêu chí tìm kiếm, chuyển hướng về trang danh sách điểm thi
+            return "redirect:/DiemThi/all";
+        }
+        return "diemthi";
     }
 }

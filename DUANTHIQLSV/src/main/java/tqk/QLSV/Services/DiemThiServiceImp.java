@@ -6,7 +6,8 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import Serializable.DiemThiId;
 import tqk.QLSV.Models.DiemThiModel;
 import tqk.QLSV.Repositories.DiemThiRepository;
@@ -42,5 +43,25 @@ public class DiemThiServiceImp implements DiemThiService {
 	    @Override
 	    public void deleteDiemThiByID(DiemThiId id) {
 	        diemThiRepository.deleteById(id);
+	    }
+	    
+	    @Override
+	   	public Page<DiemThiModel> getDiemThiPage(Pageable pageable) {
+	   		Page<DiemThiModel> page = diemThiRepository.findAll(pageable);
+	   	    if (page == null) {
+	   	        // Trường hợp không tìm thấy dữ liệu, trả về một trang rỗng
+	   	        return Page.empty(pageable);
+	   	    }
+	   	    return page;
+	   	}
+	    
+	    @Override
+	    public Page<DiemThiModel> findByMaMonHocContaining(String maMonHoc, Pageable pageable) {
+	        return diemThiRepository.findByMaMonHocContaining(maMonHoc, pageable);
+	    }
+
+	    @Override
+	    public Page<DiemThiModel> findByMaSinhVienContaining(String maSinhVien, Pageable pageable) {
+	        return diemThiRepository.findByMaSinhVienContaining(maSinhVien, pageable);
 	    }
 }
