@@ -28,7 +28,8 @@
                 </button>
                 <a class="navbar-brand" href="index.html">Admin</a> 
             </div>
-            <div style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;"> Last access : 23 April 2024 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+            <div style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;"> Last access : 23 April 2024 &nbsp; 
+            <a href="/login" class="btn btn-danger square-btn-adjust">Đăng xuất</a> </div>
         </nav>   
         <!-- /. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
@@ -87,6 +88,10 @@
     				<div class="form-group">
         					<label for="noiSinh">Nơi sinh:</label>
         					<input type="text" class="form-control" th:field="*{noiSinh}" name="noiSinh">
+    				</div>
+    				<div class="form-group">
+        					<label for="hinhAnh">Hình ảnh:</label>
+        					<input type="file" class="form-control-file" th:field="*{hinhAnh}" name="hinhAnh">
     				</div>
     				<div class="form-group">
         					<label for="maLop">Mã lớp:</label>

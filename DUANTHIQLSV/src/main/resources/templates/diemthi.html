@@ -25,7 +25,8 @@
                 </button>
                 <a class="navbar-brand" href="index.html">Admin</a> 
             </div>
-            <div style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;"> Last access : 23 April 2024 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+            <div style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;"> Last access : 23 April 2024 &nbsp; 
+            <a href="/login" class="btn btn-danger square-btn-adjust">Đăng xuất</a> </div>
         </nav>   
         <!-- /. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
@@ -83,7 +84,7 @@
         					 <td th:text="${dt?.diemTrungBinh}"></td>
                             <td>
                                 <a th:if="${dt != null}" th:href="@{/DiemThi/edit/{maMonHoc}/{maSinhVien}(maMonHoc=${dt.maMonHoc}, maSinhVien=${dt.maSinhVien})}" class="btn btn-primary">Cập nhật</a>
-                                <a th:if="${dt != null}" th:href="@{/DiemThi/delete/{maMonHoc}/{maSinhVien}(maMonHoc=${dt.maMonHoc}, maSinhVien=${dt.maSinhVien})}" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa điểm thi này?');">Xóa</a>
+                                <a th:if="${dt != null}" th:href="@{/DiemThi/delete/{maMonHoc}/{maSinhVien}(maMonHoc=${dt.maMonHoc}, maSinhVien=${dt.maSinhVien})}" class="btn btn-warning" onclick="return confirm('Bạn có chắc chắn muốn xóa điểm thi này?');">Xóa</a>
                             </td>
                         </tr>
                     </tbody>
