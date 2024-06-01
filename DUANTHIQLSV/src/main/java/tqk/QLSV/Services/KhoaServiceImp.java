@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import tqk.QLSV.Models.KhoaModel;
@@ -39,5 +41,25 @@ public class KhoaServiceImp implements KhoaService {
     @Override
     public void deleteKhoaByID(String maKhoa) {
         khoaRepository.deleteById(maKhoa);
+    }
+    
+    @Override
+   	public Page<KhoaModel> getKhoaPage(Pageable pageable) {
+   		Page<KhoaModel> page = khoaRepository.findAll(pageable);
+   	    if (page == null) {
+   	        // Trường hợp không tìm thấy dữ liệu, trả về một trang rỗng
+   	        return Page.empty(pageable);
+   	    }
+   	    return page;
+   	}
+    
+    @Override
+    public Page<KhoaModel> searchKhoaByMaKhoa(String maKhoa, Pageable pageable) {
+        return khoaRepository.findByMaKhoaContaining(maKhoa, pageable);
+    }
+
+    @Override
+    public Page<KhoaModel> searchKhoaByTenKhoa(String tenKhoa, Pageable pageable) {
+        return khoaRepository.findByTenKhoaContaining(tenKhoa, pageable);
     }
 }

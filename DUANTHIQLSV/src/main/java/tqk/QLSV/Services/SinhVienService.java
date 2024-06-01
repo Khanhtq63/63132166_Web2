@@ -1,5 +1,6 @@
 package tqk.QLSV.Services;
 
+import java.sql.Blob;
 import java.util.List;
 
 
@@ -15,19 +16,21 @@ public interface SinhVienService {
 	
 	public SinhVienModel getSinhVienByID(String maSinhVien);
 	
-	public SinhVienModel UpdateSinhVien(SinhVienModel sinhvien);
+	public SinhVienModel UpdateSinhVien(SinhVienModel sinhvien);	
 	
-	void DeleteStudentByID(String maSinhVien);
-	
-	List<SinhVienModel> SearchSinhVienByName(String hoTen);
+	void DeleteStudentByID(String maSinhVien);	
 	
 	Page<SinhVienModel> getSinhVienPage(Pageable pageable);
 	
-	List<SinhVienModel> SearchSinhVienByMaSV(String maSinhVien);
-
-	List<SinhVienModel> SearchSinhVienByGioiTinh(String gioiTinh);
-
-	List<SinhVienModel> SearchSinhVienByMaLop(String maLop);
+	Page<SinhVienModel> SearchSinhVienByName(String hoTen, Pageable pageable);
+	 
+	Page<SinhVienModel> SearchSinhVienByMaSV(String maSinhVien, Pageable pageable);
+	 
+	Page<SinhVienModel> SearchSinhVienByGioiTinh(String gioiTinh, Pageable pageable);
+	    
+	Page<SinhVienModel> SearchSinhVienByMaLop(String maLop, Pageable pageable);
+	
+	
 	
 
 }

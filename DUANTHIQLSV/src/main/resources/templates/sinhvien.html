@@ -62,19 +62,19 @@
             <div id="page-inner">                      
                 <h1>Danh sách Sinh Viên</h1>
                 
-                <!-- Form tìm kiếm sinh viên -->
+                 <!-- Form tìm kiếm sinh viên -->
                 <form action="/SinhVien/search" method="get" class="form-inline">
                     <div class="form-group">
                         <label for="searchType">Tìm kiếm theo:</label>
                         <select name="searchType" id="searchType" class="form-control" onchange="changeSearchInput()">
-                            <option value="hoTen">Tên Sinh Viên</option>
-                            <option value="maSinhVien">Mã SV</option>
-                            <option value="gioiTinh">Giới Tính</option>
-                            <option value="maLop">Mã Lớp</option>
+                            <option value="hoTen" th:selected="${searchType == 'hoTen'}">Tên Sinh Viên</option>
+                            <option value="maSinhVien" th:selected="${searchType == 'maSinhVien'}">Mã SV</option>
+                            <option value="gioiTinh" th:selected="${searchType == 'gioiTinh'}">Giới Tính</option>
+                            <option value="maLop" th:selected="${searchType == 'maLop'}">Mã Lớp</option>
                         </select>
                     </div>
                     <div class="form-group" id="searchValueDiv">
-                        <input type="text" name="searchValue" class="form-control" placeholder="Nhập giá trị tìm kiếm">
+                        <input type="text" name="searchValue" class="form-control" placeholder="Nhập giá trị tìm kiếm" th:value="${searchValue}">
                     </div>
                     <button type="submit" class="btn btn-primary">Tìm kiếm</button>
                 </form>

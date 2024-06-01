@@ -10,15 +10,15 @@ import org.springframework.stereotype.Repository;
 import tqk.QLSV.Models.SinhVienModel;
 @Repository
 public interface SinhVienRepository extends JpaRepository<SinhVienModel, String> {
-	
-	 List<SinhVienModel> findByHoTenContainingIgnoreCase(String hoTen);
-	 
+		 
 	 Page<SinhVienModel> findAll(Pageable pageable);
 	 
-	 List<SinhVienModel> findByMaSinhVienContainingIgnoreCase(String maSinhVien);
-
-	 List<SinhVienModel> findByGioiTinhContainingIgnoreCase(String gioiTinh);
-
-	 List<SinhVienModel> findByMaLopContainingIgnoreCase(String maLop);
+	 Page<SinhVienModel> findByHoTenContainingIgnoreCase(String hoTen, Pageable pageable);
+	 
+	 Page<SinhVienModel> findByMaSinhVienContainingIgnoreCase(String maSinhVien, Pageable pageable);
+	 
+	 Page<SinhVienModel> findByGioiTinhContainingIgnoreCase(String gioiTinh, Pageable pageable);
+	 
+	 Page<SinhVienModel> findByMaLopContainingIgnoreCase(String maLop, Pageable pageable);
 
 }

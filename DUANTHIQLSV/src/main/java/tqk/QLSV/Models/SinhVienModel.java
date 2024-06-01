@@ -25,8 +25,6 @@ public class SinhVienModel {
 	private String gioiTinh;
 	@Column(name="NOISINH")
 	private String noiSinh;
-	@Column(name="HINHANH")
-    private Blob hinhAnh;
 	@Column(name="MALOP")
 	private String maLop;
 	
@@ -61,15 +59,7 @@ public class SinhVienModel {
 	}
 	public void setNoiSinh(String noiSinh) {
 		this.noiSinh = noiSinh;
-	}
-	
-	public Blob getHinhAnh() {
-        return hinhAnh;
-    }
-
-    public void setHinhAnh(Blob hinhAnh) {
-        this.hinhAnh = hinhAnh;
-    }
+	}	
     
 	public String getMaLop() {
 		return maLop;
@@ -80,7 +70,7 @@ public class SinhVienModel {
 	@Override
 	public String toString() {
 		return "SinhVienModel [maSinhVien=" + maSinhVien + ", hoTen=" + hoTen + ", ngaySinh=" + ngaySinh + ", gioiTinh="
-				+ gioiTinh + ", noiSinh=" + noiSinh + ", hinhAnh=" + hinhAnh + ", maLop=" + maLop + "]";
+				+ gioiTinh + ", noiSinh=" + noiSinh + "" +  ", maLop=" + maLop + "]";
 	}
 	
 	

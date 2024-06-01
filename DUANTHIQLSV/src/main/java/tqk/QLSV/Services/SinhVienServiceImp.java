@@ -1,7 +1,13 @@
 package tqk.QLSV.Services;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.sql.Blob;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -47,12 +53,7 @@ public class SinhVienServiceImp implements SinhVienService {
 	@Override
 	public void DeleteStudentByID(String maSinhVien) {
 		sinhVienRepository.deleteById(maSinhVien);
-	}
-
-	@Override
-	public List<SinhVienModel> SearchSinhVienByName(String hoTen) {
-		return sinhVienRepository.findByHoTenContainingIgnoreCase(hoTen);
-	}
+	}	
 
 	@Override
 	public Page<SinhVienModel> getSinhVienPage(Pageable pageable) {
@@ -65,17 +66,25 @@ public class SinhVienServiceImp implements SinhVienService {
 	}
 	
 	@Override
-	public List<SinhVienModel> SearchSinhVienByMaSV(String maSinhVien) {
-	    return sinhVienRepository.findByMaSinhVienContainingIgnoreCase(maSinhVien);
+	public Page<SinhVienModel> SearchSinhVienByName(String hoTen, Pageable pageable) {
+	    return sinhVienRepository.findByHoTenContainingIgnoreCase(hoTen, pageable);
 	}
 
 	@Override
-	public List<SinhVienModel> SearchSinhVienByGioiTinh(String gioiTinh) {
-	    return sinhVienRepository.findByGioiTinhContainingIgnoreCase(gioiTinh);
+	public Page<SinhVienModel> SearchSinhVienByMaSV(String maSinhVien, Pageable pageable) {
+	    return sinhVienRepository.findByMaSinhVienContainingIgnoreCase(maSinhVien, pageable);
 	}
 
 	@Override
-	public List<SinhVienModel> SearchSinhVienByMaLop(String maLop) {
-	    return sinhVienRepository.findByMaLopContainingIgnoreCase(maLop);
+	public Page<SinhVienModel> SearchSinhVienByGioiTinh(String gioiTinh, Pageable pageable) {
+	    return sinhVienRepository.findByGioiTinhContainingIgnoreCase(gioiTinh, pageable);
 	}
+
+	@Override
+	public Page<SinhVienModel> SearchSinhVienByMaLop(String maLop, Pageable pageable) {
+	    return sinhVienRepository.findByMaLopContainingIgnoreCase(maLop, pageable);
+	}
+
+	
+	
 }

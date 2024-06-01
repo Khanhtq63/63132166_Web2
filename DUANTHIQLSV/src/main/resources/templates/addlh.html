@@ -63,12 +63,20 @@
                         <label for="tenLop">Tên lớp</label>
                         <input type="text" class="form-control" id="tenLop" name="tenLop" required>
                     </div>
+                     <div class="form-group">
+                      <label for="heDaoTao">Hệ đào tạo</label>
+                      <input type="text" class="form-control" id="heDaoTao" name="heDaoTao" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="siSo">Sĩ số</label>
+                      <input type="number" class="form-control" id="siSo" name="siSo" required>
+                  </div>
                     <div class="form-group">
                         <label for="khoa">Khoa</label>
-                        <select class="form-control" id="khoa" name="khoa" required>
+                        <select class="form-control" id="maKhoa" name="maKhoa" required>
                             <option value="" disabled selected>Chọn khoa</option>
                             <th:block th:each="khoa : ${DSKhoa}">
-                                <option th:value="${khoa.maKhoa}" th:text="${khoa.tenKhoa}"></option>
+                                <option th:value="${khoa.maKhoa}" th:text="${khoa.maKhoa}"></option>
                             </th:block>
                         </select>
                     </div>

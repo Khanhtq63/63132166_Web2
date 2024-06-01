@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import tqk.QLSV.Models.SinhVienModel;
+import tqk.QLSV.Services.LopHocService;
 import tqk.QLSV.Services.SinhVienService;
 
 @Controller
@@ -25,6 +26,9 @@ import tqk.QLSV.Services.SinhVienService;
 public class SinhVienController {
     @Autowired 
     SinhVienService sinhVienService;
+    
+    @Autowired 
+    LopHocService lopHocService;
 
     @GetMapping("/all")
     public String getAllSinhVien(Model model, @RequestParam(defaultValue = "0") int page) {
@@ -40,6 +44,7 @@ public class SinhVienController {
     @GetMapping("/addsv")
     public String createSinhVienForm(Model model) {
         model.addAttribute("DSSinhVien", new SinhVienModel());
+        model.addAttribute("DSLopHoc", lopHocService.getAllLopHoc());
         return "addsv";
     }
 
@@ -52,6 +57,7 @@ public class SinhVienController {
     @GetMapping("/edit/{maSinhVien}")
     public String editSinhVien(@PathVariable String maSinhVien, Model model) {
     	model.addAttribute("DSSinhVien", sinhVienService.getSinhVienByID(maSinhVien));
+    	model.addAttribute("DSLopHoc",lopHocService.getAllLopHoc());
     	return "updatesv";
     }
     
@@ -70,23 +76,33 @@ public class SinhVienController {
     
     
     @GetMapping("/search")
-    public String searchSinhVien(@RequestParam("searchType") String searchType, @RequestParam("searchValue") String searchValue, Model model) {
-        List<SinhVienModel> dssvList;
+    public String searchSinhVien(@RequestParam("searchType") String searchType, 
+                                 @RequestParam("searchValue") String searchValue, 
+                                 @RequestParam(defaultValue = "0") int page,
+                                 Model model) {
+        Pageable pageable = PageRequest.of(page, 5);
+        Page<SinhVienModel> sinhVienPage;
+        
         switch (searchType) {
             case "maSinhVien":
-                dssvList = sinhVienService.SearchSinhVienByMaSV(searchValue);
+                sinhVienPage = sinhVienService.SearchSinhVienByMaSV(searchValue, pageable);
                 break;
             case "gioiTinh":
-                dssvList = sinhVienService.SearchSinhVienByGioiTinh(searchValue);
+                sinhVienPage = sinhVienService.SearchSinhVienByGioiTinh(searchValue, pageable);
                 break;
             case "maLop":
-                dssvList = sinhVienService.SearchSinhVienByMaLop(searchValue);
+                sinhVienPage = sinhVienService.SearchSinhVienByMaLop(searchValue, pageable);
                 break;
             default:
-                dssvList = sinhVienService.SearchSinhVienByName(searchValue);
+                sinhVienPage = sinhVienService.SearchSinhVienByName(searchValue, pageable);
                 break;
         }
-        model.addAttribute("DSSinhVien", dssvList);
+        model.addAttribute("DSSinhVien", sinhVienPage.getContent());
+        model.addAttribute("totalPages", sinhVienPage.getTotalPages());
+        model.addAttribute("currentPage", page);
+        model.addAttribute("searchType", searchType);
+        model.addAttribute("searchValue", searchValue);
         return "sinhvien";
     }
+
 }

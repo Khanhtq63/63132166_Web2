@@ -65,7 +65,7 @@
             <div id="page-inner">                      
                 <h1>Danh sách Sinh Viên</h1>
               <!-- Add Sinh Viên Form -->
-                <form th:action="@{/SinhVien/sav}" th:object="${DSSinhVien}" method="post">
+                <form th:action="@{/SinhVien/sav}" th:object="${DSSinhVien}" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="maSinhVien">Mã SV:</label>
                         <input type="text" class="form-control" th:field="*{maSinhVien}" name="maSinhVien" required>
@@ -88,14 +88,15 @@
                     <div class="form-group">
                             <label for="noiSinh">Nơi sinh:</label>
                             <input type="text" class="form-control" th:field="*{noiSinh}" name="noiSinh">
-                    </div>
+                    </div>                   
                     <div class="form-group">
-        					<label for="hinhAnh">Hình ảnh:</label>
-        					<input type="file" class="form-control-file" th:field="*{hinhAnh}" name="hinhAnh">
-    				</div>
-                    <div class="form-group">
-                            <label for="maLop">Mã lớp:</label>
-                            <input type="text" class="form-control" th:field="*{maLop}" name="maLop" required>
+                        <label for="maLop">Mã Lớp</label>
+                        <select class="form-control" id="maLop" name="maLop" required>
+                            <option value="" disabled selected>Chọn Lớp</option>
+                            <th:block th:each="lop : ${DSLopHoc}">
+                                <option th:value="${lop.maLop}" th:text="${lop.maLop}"></option>
+                            </th:block>
+                        </select>
                     </div>
                         <button type="submit" class="btn btn-primary">Thêm Sinh Viên</button>
                 </form>
