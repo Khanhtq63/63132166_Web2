@@ -16,4 +16,5 @@ public interface LopHocService {
     void deleteLopHocByID(String maLop);
     Page<LopHocModel> searchLopHoc(String maLop, String tenLop, String heDaoTao, String maKhoa, Pageable pageable);
     Page<LopHocModel> getLopHocPage(Pageable pageable);
+    LopHocModel getLopHocByTenLop(String tenLop);
 }

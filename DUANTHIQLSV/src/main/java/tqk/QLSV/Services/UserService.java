@@ -90,6 +90,7 @@ public class UserService {
         return userRepositories.findAll();
     }
     
+    
     public List<UserModel> getUsersByQuyen(String role){
     	return userRepositories.findByRole(role);
     }

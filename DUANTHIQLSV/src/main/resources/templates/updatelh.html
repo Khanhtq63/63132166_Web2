@@ -70,19 +70,27 @@
                   </div>
                   <div class="form-group">
                       <label for="tenLop">Tên lớp</label>
-                      <input type="text" class="form-control" id="tenLop" name="tenLop" th:field="*{tenLop}" required>
+                      <input type="text" class="form-control" id="tenLop" name="tenLop" th:field="*{tenLop}" readonly>
                   </div>
                   <div class="form-group">
-                      <label for="heDaoTao">Hệ đào tạo</label>
-                      <input type="text" class="form-control" id="heDaoTao" name="heDaoTao" th:field="*{heDaoTao}" required>
-                  </div>
+                        <label for="heDaoTao">Hệ đào tạo</label>
+                        <select class="form-control" id="heDaoTao" name="heDaoTao" th:field="*{heDaoTao}" required>
+                            <option value="Cử nhân" th:selected="${DSLopHoc.heDaoTao == 'Cử nhân'}">Cử nhân</option>
+                            <option value="Thạc sĩ" th:selected="${DSLopHoc.heDaoTao == 'Thạc sĩ'}">Thạc sĩ</option>
+                        </select>
+                    </div>
                   <div class="form-group">
                       <label for="siSo">Sĩ số</label>
                       <input type="number" class="form-control" id="siSo" name="siSo" th:field="*{siSo}" required>
                   </div>
                   <div class="form-group">
                         <label for="khoa">Khoa</label>
- 						<input type="text" class="form-control" id="maKhoa" name="maKhoa" th:field="*{maKhoa}" readonly>
+                        <select class="form-control" id="maKhoa" name="maKhoa" required>
+                            <option value="" disabled selected>Chọn khoa</option>
+                            <th:block th:each="khoa : ${DSKhoa}">
+                                <option th:value="${khoa.maKhoa}" th:text="${khoa.maKhoa}"></option>
+                            </th:block>
+                        </select>
                     </div>
                   <button type="submit" class="btn btn-primary">Cập nhật</button>
               </form>

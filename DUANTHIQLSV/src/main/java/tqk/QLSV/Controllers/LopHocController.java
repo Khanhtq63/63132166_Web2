@@ -45,16 +45,22 @@ public class LopHocController {
     @PostMapping("/save")
     public String saveLopHoc(@ModelAttribute("DSLopHoc") LopHocModel lopHoc, Model model) {
         // Kiểm tra xem mã số lớp học đã tồn tại chưa
-        LopHocModel existingLopHoc = lopHocService.getLopHocByID(lopHoc.getMaLop());
-        if (existingLopHoc != null) {
-            // Nếu mã số lớp học đã tồn tại, thông báo cho người dùng
+        LopHocModel existingLopHocById = lopHocService.getLopHocByID(lopHoc.getMaLop());
+        if (existingLopHocById != null) {
             model.addAttribute("error", "Mã lớp học đã tồn tại!");
-            return "addlh"; // Trả về trang thêm lớp học với thông báo lỗi
-        } else {
-            // Nếu mã số lớp học chưa tồn tại, lưu lớp học vào cơ sở dữ liệu
-            lopHocService.saveLopHoc(lopHoc);
-            return "redirect:/LopHoc/all";
+            return "addlh";
         }
+
+        // Kiểm tra xem tên lớp học đã tồn tại chưa
+        LopHocModel existingLopHocByName = lopHocService.getLopHocByTenLop(lopHoc.getTenLop());
+        if (existingLopHocByName != null) {
+            model.addAttribute("error", "Tên lớp học đã tồn tại!");
+            return "addlh";
+        }
+
+        // Nếu mã số lớp học và tên lớp học chưa tồn tại, lưu lớp học vào cơ sở dữ liệu
+        lopHocService.saveLopHoc(lopHoc);
+        return "redirect:/LopHoc/all";
     }
 
     @GetMapping("/edit/{maLop}")
@@ -65,10 +71,35 @@ public class LopHocController {
     }
     
     @PostMapping("/update")
-    public String updateLopHoc(@ModelAttribute("DSLopHoc") LopHocModel lopHoc) {       
-        lopHocService.saveLopHoc(lopHoc);
+    public String updateLopHoc(@ModelAttribute("DSLopHoc") LopHocModel lopHoc, Model model) {
+        // Lấy thông tin lớp học hiện tại từ cơ sở dữ liệu
+        LopHocModel existingLopHoc = lopHocService.getLopHocByID(lopHoc.getMaLop());
+        
+        if (existingLopHoc == null) {
+            model.addAttribute("error", "Lớp học không tồn tại!");
+            return "updatelh";
+        }
+        
+        // Kiểm tra xem tên lớp học đã tồn tại chưa (chỉ khi tên mới khác với tên hiện tại)
+        if (!existingLopHoc.getTenLop().equals(lopHoc.getTenLop())) {
+            LopHocModel existingLopHocByName = lopHocService.getLopHocByTenLop(lopHoc.getTenLop());
+            if (existingLopHocByName != null) {
+                model.addAttribute("error", "Tên lớp học đã tồn tại!");
+                model.addAttribute("DSLopHoc", lopHoc);
+                model.addAttribute("DSKhoa", khoaService.getAllKhoa());
+                return "updatelh";
+            }
+        }
+        
+        // Cập nhật thông tin lớp học
+        existingLopHoc.setTenLop(lopHoc.getTenLop());
+        existingLopHoc.setHeDaoTao(lopHoc.getHeDaoTao());
+        existingLopHoc.setSiSo(lopHoc.getSiSo());
+        existingLopHoc.setMaKhoa(lopHoc.getMaKhoa());
+
+        lopHocService.updateLopHoc(existingLopHoc);
         return "redirect:/LopHoc/all";
-     }
+    }
     
 
 

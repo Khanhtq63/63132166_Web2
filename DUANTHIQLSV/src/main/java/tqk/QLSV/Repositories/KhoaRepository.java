@@ -11,5 +11,5 @@ public interface KhoaRepository extends JpaRepository<KhoaModel, String> {
 	Page<KhoaModel> findAll(Pageable pageable);
 	Page<KhoaModel> findByMaKhoaContaining(String maKhoa, Pageable pageable);
 	Page<KhoaModel> findByTenKhoaContaining(String tenKhoa, Pageable pageable);
-
+	boolean existsByTenKhoa(String tenKhoa);
 }

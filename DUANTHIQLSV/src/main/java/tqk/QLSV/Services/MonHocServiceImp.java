@@ -62,4 +62,9 @@ public class MonHocServiceImp implements MonHocService {
     public Page<MonHocModel> findByTenMonHocContaining(String tenMonHoc, Pageable pageable) {
         return monHocRepository.findByTenMonHocContaining(tenMonHoc, pageable);
     }
+    
+    @Override
+    public MonHocModel getMonHocByName(String tenMonHoc) {
+        return monHocRepository.findByTenMonHoc(tenMonHoc); // Thêm phương thức này trong repository
+    }
 }

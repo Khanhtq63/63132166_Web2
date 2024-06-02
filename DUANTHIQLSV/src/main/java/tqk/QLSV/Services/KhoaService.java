@@ -17,4 +17,5 @@ public interface KhoaService {
     Page<KhoaModel> getKhoaPage(Pageable pageable);
     Page<KhoaModel> searchKhoaByMaKhoa(String maKhoa, Pageable pageable);
     Page<KhoaModel> searchKhoaByTenKhoa(String tenKhoa, Pageable pageable);
+    boolean existsByTenKhoa(String tenKhoa);
 }

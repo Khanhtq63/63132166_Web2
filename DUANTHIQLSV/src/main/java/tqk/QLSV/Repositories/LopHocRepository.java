@@ -14,4 +14,5 @@ public interface LopHocRepository extends JpaRepository<LopHocModel, String> {
 	Page<LopHocModel> findByMaLopContainingAndTenLopContainingAndHeDaoTaoContainingAndMaKhoaContaining(
 	        String maLop, String tenLop, String heDaoTao, String maKhoa, Pageable pageable);
     Page<LopHocModel> findAll(Pageable pageable);
+    LopHocModel findByTenLop(String tenLop);
 }

@@ -14,4 +14,5 @@ public interface MonHocService {
     Page<MonHocModel> getMonHocPage(Pageable pageable);
     Page<MonHocModel> findByMaMonHocContaining(String maMonHoc, Pageable pageable);
     Page<MonHocModel> findByTenMonHocContaining(String tenMonHoc, Pageable pageable);
+    MonHocModel getMonHocByName(String tenMonHoc);
 }

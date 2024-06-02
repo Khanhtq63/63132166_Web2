@@ -37,14 +37,16 @@ public class MonHocController {
 
     @PostMapping("/save")
     public String saveMonHoc(@ModelAttribute("DSMonHoc") MonHocModel monHoc, Model model) {
-        // Kiểm tra xem mã số môn học đã tồn tại chưa
-        MonHocModel existingMonHoc = monHocService.getMonHocByID(monHoc.getMaMonHoc());
-        if (existingMonHoc != null) {
-            // Nếu mã số môn học đã tồn tại, thông báo cho người dùng
+        MonHocModel existingMonHocByMa = monHocService.getMonHocByID(monHoc.getMaMonHoc());
+        MonHocModel existingMonHocByName = monHocService.getMonHocByName(monHoc.getTenMonHoc());
+        
+        if (existingMonHocByMa != null) {
             model.addAttribute("error", "Mã môn học đã tồn tại!");
-            return "addmh"; // Trả về trang thêm môn học với thông báo lỗi
+            return "addmh";
+        } else if (existingMonHocByName != null) {
+            model.addAttribute("error", "Tên môn học đã tồn tại!");
+            return "addmh";
         } else {
-            // Nếu mã số môn học chưa tồn tại, lưu môn học vào cơ sở dữ liệu
             monHocService.saveMonHoc(monHoc);
             return "redirect:/MonHoc/all";
         }
@@ -57,7 +59,12 @@ public class MonHocController {
     }
     
     @PostMapping("/update")
-    public String updateMonHoc(@ModelAttribute("DSMonHoc") MonHocModel monHoc) {
+    public String updateMonHoc(@ModelAttribute("DSMonHoc") MonHocModel monHoc, Model model) {
+    	MonHocModel existingMonHocByName = monHocService.getMonHocByName(monHoc.getTenMonHoc());
+    	if (existingMonHocByName != null) {
+            model.addAttribute("error", "Tên môn học đã tồn tại!");
+            return "addmh";
+        }
          monHocService.saveMonHoc(monHoc);
          return "redirect:/MonHoc/all";
     }

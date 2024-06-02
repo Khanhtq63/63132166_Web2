@@ -43,11 +43,16 @@ public class KhoaController {
             // Nếu mã khoa đã tồn tại, thông báo cho người dùng
             model.addAttribute("error", "Mã khoa đã tồn tại!");
             return "addk"; // Trả về trang thêm khoa với thông báo lỗi
-        } else {
-            // Nếu mã khoa chưa tồn tại, lưu khoa vào cơ sở dữ liệu
-            khoaService.saveKhoa(khoa);
-            return "redirect:/Khoa/all";
         }
+        // Kiểm tra xem tên khoa đã tồn tại chưa
+        if (khoaService.existsByTenKhoa(khoa.getTenKhoa())) {
+            // Nếu tên khoa đã tồn tại, thông báo cho người dùng
+            model.addAttribute("error", "Tên khoa đã tồn tại!");
+            return "addk"; // Trả về trang thêm khoa với thông báo lỗi
+        }
+        // Nếu mã khoa và tên khoa chưa tồn tại, lưu khoa vào cơ sở dữ liệu
+        khoaService.saveKhoa(khoa);
+        return "redirect:/Khoa/all";
     }
 
     @GetMapping("/edit/{maKhoa}")
@@ -57,7 +62,12 @@ public class KhoaController {
     }
     
     @PostMapping("/update")
-    public String updateKhoa(@ModelAttribute("DSKhoa") KhoaModel khoa) {
+    public String updateKhoa(@ModelAttribute("DSKhoa") KhoaModel khoa, Model model) {  	
+        if (khoaService.existsByTenKhoa(khoa.getTenKhoa())) {
+            // Nếu tên khoa đã tồn tại, thông báo cho người dùng
+            model.addAttribute("error", "Tên khoa đã tồn tại!");
+            return "addk"; // Trả về trang thêm khoa với thông báo lỗi
+        }
     	khoaService.saveKhoa(khoa);
         return "redirect:/Khoa/all";      
     }

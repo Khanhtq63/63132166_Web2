@@ -62,4 +62,9 @@ public class KhoaServiceImp implements KhoaService {
     public Page<KhoaModel> searchKhoaByTenKhoa(String tenKhoa, Pageable pageable) {
         return khoaRepository.findByTenKhoaContaining(tenKhoa, pageable);
     }
+    
+    @Override
+    public boolean existsByTenKhoa(String tenKhoa) {
+        return khoaRepository.existsByTenKhoa(tenKhoa);
+    }
 }

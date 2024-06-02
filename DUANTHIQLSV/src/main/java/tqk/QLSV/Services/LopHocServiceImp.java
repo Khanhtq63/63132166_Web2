@@ -57,4 +57,9 @@ public class LopHocServiceImp implements LopHocService {
    	    }
    	    return page;
    	}
+    
+    @Override
+    public LopHocModel getLopHocByTenLop(String tenLop) { // Thêm phương thức này
+        return lopHocRepository.findByTenLop(tenLop);
+    }
 }

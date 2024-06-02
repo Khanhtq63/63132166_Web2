@@ -12,4 +12,5 @@ public interface MonHocRepository extends JpaRepository<MonHocModel, String> {
 	Page<MonHocModel> findAll(Pageable pageable);
 	 Page<MonHocModel> findByMaMonHocContaining(String maMonHoc, Pageable pageable);
 	    Page<MonHocModel> findByTenMonHocContaining(String tenMonHoc, Pageable pageable);
+	    MonHocModel findByTenMonHoc(String tenMonHoc);
 }
