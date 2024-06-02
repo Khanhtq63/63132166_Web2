@@ -64,4 +64,7 @@ public class LoaiThietBiServiceImpl implements LoaiThietBiService {
         }
         return 1;
     }
+    public boolean exists(LoaiThietBi loaiThietBi) {
+        return loaiThietBiRepository.findByTenLoai(loaiThietBi.getTenLoai()).isPresent();
+    }
 }
