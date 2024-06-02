@@ -82,12 +82,7 @@
                   </div>
                   <div class="form-group">
                         <label for="khoa">Khoa</label>
-                        <select class="form-control" id="maKhoa" name="maKhoa" required>
-                            <option value="" disabled selected>Chọn khoa</option>
-                            <th:block th:each="khoa : ${DSKhoa}">
-                                <option th:value="${khoa.maKhoa}" th:text="${khoa.maKhoa}" th:field="*{maKhoa}"></option>
-                            </th:block>
-                        </select>
+ 						<input type="text" class="form-control" id="maKhoa" name="maKhoa" th:field="*{maKhoa}" readonly>
                     </div>
                   <button type="submit" class="btn btn-primary">Cập nhật</button>
               </form>

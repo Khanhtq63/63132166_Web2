@@ -21,10 +21,10 @@ public class DiemThiModel {
     private String maSinhVien;
 
     @Column(name="DIEMQUATRINH")
-    private float diemQuaTrinh;
+    private Float diemQuaTrinh;
 
     @Column(name="DIEMGIUAKY")
-    private float diemGiuaKy;
+    private Float diemGiuaKy;
 
     @Column(name="DIEMCUOIKY")
     private Float diemCuoiKy;
@@ -47,19 +47,19 @@ public class DiemThiModel {
         this.maSinhVien = maSinhVien;
     }
 
-    public float getDiemQuaTrinh() {
+    public Float getDiemQuaTrinh() {
         return diemQuaTrinh;
     }
 
-    public void setDiemQuaTrinh(float diemQuaTrinh) {
+    public void setDiemQuaTrinh(Float diemQuaTrinh) {
         this.diemQuaTrinh = diemQuaTrinh;
     }
 
-    public float getDiemGiuaKy() {
+    public Float getDiemGiuaKy() {
         return diemGiuaKy;
     }
 
-    public void setDiemGiuaKy(float diemGiuaKy) {
+    public void setDiemGiuaKy(Float diemGiuaKy) {
         this.diemGiuaKy = diemGiuaKy;
     }
 

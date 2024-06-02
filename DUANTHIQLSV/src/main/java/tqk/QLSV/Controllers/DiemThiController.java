@@ -49,6 +49,18 @@ public class DiemThiController {
 
     @PostMapping("/save")
     public String saveDiemThi(@ModelAttribute("diemThi") DiemThiModel diemThi) {
+        // Kiểm tra và thiết lập giá trị mặc định cho các trường điểm nếu chúng không được cung cấp
+        if (diemThi.getDiemQuaTrinh() == null) {
+            diemThi.setDiemQuaTrinh(0f); // Giá trị mặc định cho điểm quá trình là 0
+        }
+        if (diemThi.getDiemGiuaKy() == null) {
+            diemThi.setDiemGiuaKy(0f); // Giá trị mặc định cho điểm giữa kỳ là 0
+        }
+        if (diemThi.getDiemCuoiKy() == null) {
+            diemThi.setDiemCuoiKy(0f); // Giá trị mặc định cho điểm cuối kỳ là 0
+        }
+
+        // Lưu điểm thi vào cơ sở dữ liệu
         diemThiService.saveDiemThi(diemThi);
         return "redirect:/DiemThi/all";
     }
@@ -64,6 +76,18 @@ public class DiemThiController {
     
     @PostMapping("/updatedt")
     public String updateDiemThi(@ModelAttribute("diemThi") DiemThiModel diemThi) {
+        // Kiểm tra và thiết lập giá trị mặc định cho các trường điểm nếu chúng không được cung cấp
+        if (diemThi.getDiemQuaTrinh() == null) {
+            diemThi.setDiemQuaTrinh(0f); // Giá trị mặc định cho điểm quá trình là 0
+        }
+        if (diemThi.getDiemGiuaKy() == null) {
+            diemThi.setDiemGiuaKy(0f); // Giá trị mặc định cho điểm giữa kỳ là 0
+        }
+        if (diemThi.getDiemCuoiKy() == null) {
+            diemThi.setDiemCuoiKy(0f); // Giá trị mặc định cho điểm cuối kỳ là 0
+        }
+
+        // Lưu điểm thi vào cơ sở dữ liệu
         diemThiService.updateDiemThi(diemThi);
         return "redirect:/DiemThi/all";
     }
