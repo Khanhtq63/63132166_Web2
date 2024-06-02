@@ -5,6 +5,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.util.Base64;
+import java.util.List;
 
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
@@ -29,6 +30,14 @@ public class UserService {
     public boolean existsByUsername(String username) {
         return userRepositories.existsByUsername(username);
     }
+    
+    public UserModel findByUsername(String username) {
+        return userRepositories.findByUsername(username);
+    }
+
+    public void save(UserModel user) {
+        userRepositories.save(user);
+    }
 
     public boolean registerUser(UserModel user) throws IOException, NoSuchAlgorithmException, InvalidKeySpecException {
         if (user == null || Utility.isNullOrEmpty(user.getUsername())) {
@@ -43,6 +52,11 @@ public class UserService {
         
         String encodedPassword = hashPassword(user.getPassword());
         user.setPassword(encodedPassword);
+        
+     // Đặt role mặc định nếu chưa được thiết lập
+        if (user.getRole() == null || user.getRole().isEmpty()) {
+            user.setRole("USER"); // Role mặc định là USER
+        }
         
         userRepositories.save(user);
         return true;
@@ -69,6 +83,15 @@ public class UserService {
         SecretKeyFactory factory = SecretKeyFactory.getInstance(ALGORITHM);
         byte[] originalHash = factory.generateSecret(spec).getEncoded();
         return MessageDigest.isEqual(originalHash, decodedHash);
+    }
+    
+ // Thêm phương thức này để lấy tất cả người dùng
+    public List<UserModel> getAllUsers() {
+        return userRepositories.findAll();
+    }
+    
+    public List<UserModel> getUsersByQuyen(String role){
+    	return userRepositories.findByRole(role);
     }
 
 

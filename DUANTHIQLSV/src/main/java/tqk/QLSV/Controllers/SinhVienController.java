@@ -72,6 +72,13 @@ public class SinhVienController {
     	return "updatesv";
     }
     
+    @PostMapping("/update")
+    public String updateSinhVien(@ModelAttribute("DSSinhVien") SinhVienModel sinhVien) {     
+         sinhVienService.SaveSinhVien(sinhVien);
+         return "redirect:/SinhVien/all";
+        
+    }
+    
     @GetMapping("/read/{maSinhVien}")
     public String readSinhVien(@PathVariable String maSinhVien, Model model) {
         SinhVienModel sinhVien = sinhVienService.getSinhVienByID(maSinhVien);

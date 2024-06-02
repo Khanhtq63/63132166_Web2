@@ -1,6 +1,7 @@
 package tqk.QLSV.Controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -55,11 +56,23 @@ public class KhoaController {
         return "updatek";
     }
     
+    @PostMapping("/update")
+    public String updateKhoa(@ModelAttribute("DSKhoa") KhoaModel khoa) {
+    	khoaService.saveKhoa(khoa);
+        return "redirect:/Khoa/all";      
+    }
+    
 
     @GetMapping("/delete/{maKhoa}")
-    public String deleteKhoa(@PathVariable String maKhoa) {
-        khoaService.deleteKhoaByID(maKhoa);
-        return "redirect:/Khoa/all";
+    public String deleteKhoa(@PathVariable String maKhoa, Model model) {
+        try {
+            khoaService.deleteKhoaByID(maKhoa);
+            return "redirect:/Khoa/all";
+        } catch (DataIntegrityViolationException e) {
+            // Nếu xảy ra lỗi integrity constraint violation
+            model.addAttribute("error", "Không thể xóa khoa này vì có lớp đang sử dụng.");
+            return "error"; // Trả về trang thông báo lỗi
+        }
     }
     
     @GetMapping("/search")

@@ -1,6 +1,7 @@
 package tqk.QLSV.Controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -54,11 +55,23 @@ public class MonHocController {
         model.addAttribute("DSMonHoc", monHocService.getMonHocByID(maMonHoc));
         return "updatemh";
     }
+    
+    @PostMapping("/update")
+    public String updateMonHoc(@ModelAttribute("DSMonHoc") MonHocModel monHoc) {
+         monHocService.saveMonHoc(monHoc);
+         return "redirect:/MonHoc/all";
+    }
 
     @GetMapping("/delete/{maMonHoc}")
-    public String deleteMonHoc(@PathVariable String maMonHoc) {
-        monHocService.deleteMonHocByID(maMonHoc);
-        return "redirect:/MonHoc/all";
+    public String deleteMonHoc(@PathVariable String maMonHoc, Model model) {
+    	try {
+    		monHocService.deleteMonHocByID(maMonHoc);
+            return "redirect:/MonHoc/all";
+    	} catch (DataIntegrityViolationException e) {
+    		model.addAttribute("error","Không thể xóa vì có sinh viên đang học môn này");
+    		return "error";
+    	}
+
     }
     
     @GetMapping("/search")

@@ -48,14 +48,16 @@
                     <li  >
                         <a  href="/DiemThi/all"><i class="fa fa-edit fa-3x"></i> Điểm số </a>
                     </li>				
-		
+					<li>
+                        <a href="/admin/manage-roles"><i class="fa fa-cog fa-3x"></i> Quản trị</a>
+                    </li>
                 </ul>
             </div>
         </nav>
         <div id="page-wrapper">
             <div id="page-inner">
                 <h1>Cập nhật Khoa</h1>
-                <form th:action="@{/Khoa/save}" th:object="${DSKhoa}" method="post">
+                <form th:action="@{/Khoa/update}" th:object="${DSKhoa}" method="post">
                     <div class="form-group">
                         <label for="maKhoa">Mã Khoa</label>
                         <input type="text" id="maKhoa" th:field="*{maKhoa}" class="form-control" placeholder="Mã Khoa" readonly />

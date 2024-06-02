@@ -53,7 +53,9 @@
                     <li  >
                         <a  href="/DiemThi/all"><i class="fa fa-edit fa-3x"></i> Điểm số </a>
                     </li>				
-		
+					<li>
+                        <a href="/admin/manage-roles"><i class="fa fa-cog fa-3x"></i> Quản trị</a>
+                    </li>
                 </ul>
             </div>
         </nav>  
@@ -61,7 +63,7 @@
         <div id="page-wrapper" >
             <div id="page-inner">                      
               <h1>Cập nhật lớp học</h1>
-              <form th:action="@{/LopHoc/save}" th:object="${DSLopHoc}" method="post">
+              <form th:action="@{/LopHoc/update}" th:object="${DSLopHoc}" method="post">
                   <div class="form-group">
                       <label for="maLop">Mã lớp</label>
                       <input type="text" class="form-control" id="maLop" name="maLop" th:field="*{maLop}" readonly>

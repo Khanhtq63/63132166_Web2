@@ -3,6 +3,7 @@ package tqk.QLSV.Controllers;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -76,4 +77,7 @@ public class UserController {
             return "redirect:/login";
         }
     }
+    
+ // Phương thức để lấy danh sách người dùng
+
 }

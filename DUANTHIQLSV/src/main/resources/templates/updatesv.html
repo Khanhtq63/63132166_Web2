@@ -56,7 +56,9 @@
                     <li  >
                         <a  href="/DiemThi/all"><i class="fa fa-edit fa-3x"></i> Điểm số </a>
                     </li>				
-		
+					<li>
+                        <a href="/admin/manage-roles"><i class="fa fa-cog fa-3x"></i> Quản trị</a>
+                    </li>
                 </ul>
             </div>
         </nav>  
@@ -66,7 +68,7 @@
                 <h1>Cập nhật sinh viên</h1>
                 
               <!-- Add Sinh Viên Form -->
-				<form th:action="@{/SinhVien/sav}" th:object="${DSSinhVien}" method="post">
+				<form th:action="@{/SinhVien/update}" th:object="${DSSinhVien}" method="post">
     				<div class="form-group">
         				<label for="maSinhVien">Mã SV:</label>
         				<input type="text" class="form-control" th:field="*{maSinhVien}" name="maSinhVien" readonly>
@@ -91,15 +93,9 @@
         					<input type="text" class="form-control" th:field="*{noiSinh}" name="noiSinh">
     				</div>
     				<div class="form-group">
-    <label for="maLop">Mã Lớp</label>
-    <select class="form-control" id="maLop" name="maLop" disabled>
-        <option value="" disabled>Chọn Lớp</option>
-        <th:block th:each="lop : ${DSLopHoc}" >
-            <option th:value="${lop.maLop}" th:text="${lop.maLop}" th:selected="${lop.maLop eq DSSinhVien.maLop}"></option>
-        </th:block>
-    </select>
-</div>
-
+        					<label for="maLop">Mã lớp:</label>
+        					<input type="text" class="form-control" th:field="*{maLop}" name="maLop" readonly>
+    				</div>  				
     					<button type="submit" class="btn btn-primary">Cập Nhật Sinh Viên</button>
 				</form>
             </div>
