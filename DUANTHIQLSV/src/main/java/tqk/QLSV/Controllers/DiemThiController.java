@@ -48,7 +48,19 @@ public class DiemThiController {
     }
 
     @PostMapping("/save")
-    public String saveDiemThi(@ModelAttribute("diemThi") DiemThiModel diemThi) {
+    public String saveDiemThi(@ModelAttribute("diemThi") DiemThiModel diemThi, Model model) {
+        DiemThiId id = new DiemThiId(diemThi.getMaMonHoc(), diemThi.getMaSinhVien());
+        
+        // Kiểm tra xem điểm đã tồn tại chưa
+        if (diemThiService.existsById(id)) {
+            // Nếu đã tồn tại, hiển thị thông báo lỗi
+            model.addAttribute("errorMessage", "Điểm của môn học này cho sinh viên này đã tồn tại.");
+            model.addAttribute("diemThi", diemThi);
+            model.addAttribute("DSMonHoc", monHocService.getAllMonHoc());
+            model.addAttribute("DSSinhVien", sinhVienService.getAllSinhVien());
+            return "adddt";
+        }
+
         // Kiểm tra và thiết lập giá trị mặc định cho các trường điểm nếu chúng không được cung cấp
         if (diemThi.getDiemQuaTrinh() == null) {
             diemThi.setDiemQuaTrinh(0f); // Giá trị mặc định cho điểm quá trình là 0

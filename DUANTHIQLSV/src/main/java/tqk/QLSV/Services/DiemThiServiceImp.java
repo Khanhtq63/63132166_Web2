@@ -64,4 +64,9 @@ public class DiemThiServiceImp implements DiemThiService {
 	    public Page<DiemThiModel> findByMaSinhVienContaining(String maSinhVien, Pageable pageable) {
 	        return diemThiRepository.findByMaSinhVienContaining(maSinhVien, pageable);
 	    }
+	    
+	    @Override
+	    public boolean existsById(DiemThiId id) {
+	        return diemThiRepository.existsById(id);
+	    }
 }

@@ -15,5 +15,6 @@ public interface DiemThiService {
     Page<DiemThiModel> getDiemThiPage(Pageable pageable);
     Page<DiemThiModel> findByMaMonHocContaining(String maMonHoc, Pageable pageable);
     Page<DiemThiModel> findByMaSinhVienContaining(String maSinhVien, Pageable pageable);
+    boolean existsById(DiemThiId id);
 
 }
